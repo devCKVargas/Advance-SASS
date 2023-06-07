@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	//? This defines what 1rem is
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	padding: 3rem;
+}
+
+/* own scrollbar */
+html {
+	/* scrollbar firefox */
+	scrollbar-color: rgb(1, 1, 1) rgb(110, 110, 110);
+}
+
+/* Note: The -webkit-scrollbar is not supported by Firefox or IE and Edge. */
+
+/* width */
+::-webkit-scrollbar {
+	width: 1rem;
+
+	/* Track */
+	&-track {
+		box-shadow: inset 0 0 0.5rem grey;
+		border-radius: 0.8rem;
+
+		/* not handle on */
+		&-piece {
+			background: rgb(1, 1, 1);
+		}
+	}
+
+	/* Handle */
+	&-thumb {
+		background: rgb(110, 110, 110);
+		border-radius: 1rem;
+
+		/* Handle on hover */
+		&:hover {
+			background: rgb(110, 110, 110);
+		}
+	}
+}

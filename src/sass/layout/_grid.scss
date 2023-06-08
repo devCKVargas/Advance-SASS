@@ -1,6 +1,5 @@
 .row {
 	max-width: $grid-width;
-	background: #eee;
 	margin: 0 auto;
 
 	&:not(:last-child) {
@@ -14,7 +13,6 @@
 	//* attr contains (*)
 	//* attr that ends ($)
 	[class^="col-"] {
-		background: darksalmon;
 		float: left;
 
 		&:not(:last-child) {
@@ -23,7 +21,7 @@
 	}
 
 	.col-1-of-2 {
-		width: calc((100% - #{$gutter-y}) / 2);
+		width: calc((100% - #{$gutter-x}) / 2);
 	}
 
 	.col-1-of-3 {

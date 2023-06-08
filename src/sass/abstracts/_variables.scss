@@ -1,12 +1,33 @@
+//? COLORS
 $clr-primary-light: #80d671;
 $clr-primary: #54c47a;
 $clr-primary-dark: #27b485;
+
+$clr-secondary-light: #ffb900;
+$clr-secondary-dark: #ff7730;
+
+$clr-tertiary-light: #2998ff;
+$clr-tertiary-dark: #5643fa;
+
+$clr-gray-light-1: #f7f7f7;
+$clr-gray-light-2: #eee;
+
 $clr-darkslategray: #2f4f4f;
 $clr-gray-dark: #787878;
 $clr-white: #fff;
-$clr-black: #000000;
+$clr-black: #000;
+
+//? FONT
+$default-font-size: 1.6rem;
 
 //? GRID
 $grid-width: 114rem;
-$gutter-y: 6rem;
-$gutter-x: 8rem;
+$gutter-x: 6rem;
+$gutter-y: 8rem;
+
+//? SHADOW rgba()
+$shadow-clr-1: rgba($clr-black, 0.15);
+$shadow-clr-2: rgba($clr-black, 0.2);
+$shadow-clr-2: rgba($clr-black, 0.3);
+$shadow-clr-4: rgba($clr-black, 0.4);
+$shadow-clr-5: rgba($clr-black, 0.5);

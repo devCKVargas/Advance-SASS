@@ -8,6 +8,12 @@
 - [x] CLI basic commands
 - [x] Learn SASS
 
+## Code-along
+
+- [x] Natours
+- [ ] Nexter
+- [ ] Trello
+
 ## Basic Responsive Design Principles
 
 - [ ] Fluid Grids & Layouts

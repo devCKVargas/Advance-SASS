@@ -1,0 +1,71 @@
+.story {
+	width: 75%;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem $shadow-clr-1;
+	border-radius: 3px;
+	padding: 6rem;
+	padding-left: 9rem;
+	font-size: $default-font-size;
+	transform: skewX(-12deg);
+	background-color: rgba($clr-white, 60%);
+
+	& > * {
+		transform: skewX(12deg);
+	}
+
+	&__shape {
+		width: 15rem; //* required 0️⃣
+		height: 15rem; //* required 0️⃣
+		float: left; //* required 0️⃣
+
+		//* Wrap text around shape element 0️⃣
+		-webkit-shape-outside: circle(50% at 50% 50%);
+		shape-outside: circle(50% at 50% 50%);
+		//* Turn shape element into a circle 1️⃣
+		-webkit-clip-path: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);
+
+		transform: translateX(-3rem) skewX(12deg);
+		position: relative;
+
+		//* remove shaking glitch
+		backface-visibility: hidden;
+	}
+
+	&__img {
+		height: 100%;
+		transition: all .5s;
+		transform: translateX(-3.5rem) scale(1.5);
+		//* remove shape glitch (older browser)
+		backface-visibility: hidden;
+	}
+
+	&__text {
+		transform: skewX(12deg);
+	}
+
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		color: $clr-white;
+		text-transform: uppercase;
+		font-size: 1.7rem;
+		text-align: center;
+		transform: translate(-50%, 0);
+		opacity: 0;
+		transition: all .5s;
+		//* remove shaking glitch
+		backface-visibility: hidden;
+	}
+
+	&:hover &__caption {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+
+	&:hover &__img {
+		filter: blur(.325rem) brightness(80%);
+		transform: translateX(-3.5rem) scale(1);
+	}
+}

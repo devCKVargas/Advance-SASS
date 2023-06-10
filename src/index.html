@@ -2,30 +2,30 @@
 <html lang="en">
 
 	<head>
-		<!--@ meta tags -->
+		<!--$ meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Chris King Vargas">
 		<meta name="description" content="Natours landing page">
 
-		<!--@ Font -->
+		<!--$ Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
 
-		<!--@ CSS -->
+		<!--$ CSS -->
 
-		<!--@ normalize -->
+		<!--$ normalize -->
 		<link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
 
-		<!--@ favicon -->
+		<!--$ favicon -->
 		<link rel="shortcut icon" type="image/png" href="assets/img/favicon.webp" />
 
-		<!--@ style -->
+		<!--$ style -->
 		<link rel="stylesheet" href="css/icon-font.css" />
 		<link rel="stylesheet" href="css/main.css" />
 
-		<!--@ title -->
+		<!--$ title -->
 		<title>Natours | Exciting tours for adventurous people</title>
 	</head>
 
@@ -34,16 +34,16 @@
 		<!--@ NAVIGATION  -->
 		<div class="navigation">
 
-			<!--@ nav toggle-->
+			<!--$ nav toggle-->
 			<input type="checkbox" name="" id="navi-toggle" class="navigation__checkbox">
 			<label for="navi-toggle" class="navigation__button">
 				<span class="navigation__icon"></span>
 			</label>
 
-			<!--@ nav bg -->
+			<!--$ nav bg -->
 			<div class="navigation__background"></div>
 
-			<!--@ nav -->
+			<!--$ nav -->
 			<nav class="navigation__nav">
 				<ul class="navigation__list">
 					<li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
@@ -58,19 +58,19 @@
 		<!--@ HEADER -->
 		<header class="header">
 
-			<!--@ header logo -->
+			<!--$ header logo -->
 			<div class="header__logo-box">
 				<img src="assets/img/logo-white.png" alt="logo" class="header__logo" />
 			</div>
 
-			<!--@ header main heading -->
+			<!--$ header main heading -->
 			<div class="header__text-box">
 				<h1 class="heading-primary">
 					<span class="heading-primary--main">Outdoors</span>
 					<span class="heading-primary--sub">is where life happens</span>
 				</h1>
 
-				<!--@ header main button -->
+				<!--$ header main button -->
 				<a href="#" class="btn btn--white btn--animated">Discover our tours</a>
 			</div>
 		</header>
@@ -79,17 +79,17 @@
 		<main>
 
 			<!--@ about section -->
-			<section class="section-about">
+			<section class="section-about" id="about">
 
-				<!--@ secondary heading -->
+				<!--$ secondary heading -->
 				<div class="u-center-text u-mb-lg">
 					<h2 class="heading-secondary">Exciting tours for adventurous people</h2>
 				</div>
 
-				<!--@ row -->
+				<!--$ row -->
 				<div class="row">
 
-					<!--@ text content column -->
+					<!--$ text content column -->
 					<div class="col-1-of-2">
 						<h3 class="heading-tertiary u-mb-sm">You're going to fall in love with nature</h3>
 						<p class="paragraph">
@@ -103,7 +103,7 @@
 						<a href="#" class="btn-text">Learn more &rarr;</a>
 					</div>
 
-					<!--@ image composition column -->
+					<!--$ image composition column -->
 					<div class="col-1-of-2">
 						<div class="composition">
 							<img src="assets/img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
@@ -115,12 +115,12 @@
 			</section>
 
 			<!--@ features section -->
-			<section class="section-features">
+			<section class="section-features" id="features">
 
-				<!--@ row -->
+				<!--$ row -->
 				<div class="row">
 
-					<!--@ feature box column -->
+					<!--$ feature box column -->
 					<div class="col-1-of-4">
 						<div class="feature-box">
 							<i class="feature-box__icon icon-basic-world"></i>
@@ -131,7 +131,7 @@
 						</div>
 					</div>
 
-					<!--@ feature box column -->
+					<!--$ feature box column -->
 					<div class="col-1-of-4">
 						<div class="feature-box">
 							<i class="feature-box__icon icon-basic-compass"></i>
@@ -142,7 +142,7 @@
 						</div>
 					</div>
 
-					<!--@ feature box column -->
+					<!--$ feature box column -->
 					<div class="col-1-of-4">
 						<div class="feature-box">
 							<i class="feature-box__icon icon-basic-map"></i>
@@ -153,7 +153,7 @@
 						</div>
 					</div>
 
-					<!--@ feature box column -->
+					<!--$ feature box column -->
 					<div class="col-1-of-4">
 						<div class="feature-box">
 							<i class="feature-box__icon icon-basic-heart"></i>
@@ -167,17 +167,17 @@
 			</section>
 
 			<!--@ tours section -->
-			<section class="section-tours">
+			<section class="section-tours" id="tours">
 
-				<!--@ tours heading -->
+				<!--$ tours heading -->
 				<div class="u-center-text u-mb-lg">
 					<h2 class="heading-secondary">Most popular tours</h2>
 				</div>
 
-				<!--@ row -->
+				<!--$ row -->
 				<div class="row">
 
-					<!--@ card column -->
+					<!--$ card column -->
 					<div class="col-1-of-3">
 						<div class="card">
 							<div class="card__side card__side--front">
@@ -203,13 +203,13 @@
 										<p class="card__price-only">Only</p>
 										<p class="card__price-value">$297</p>
 									</div>
-									<a href="#" class="btn btn--white">Book now!</a>
+									<a href="#popup" class="btn btn--white">Book now!</a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<!--@ card column -->
+					<!--$ card column -->
 					<div class="col-1-of-3">
 						<div class="card">
 							<div class="card__side card__side--front">
@@ -236,13 +236,13 @@
 										<p class="card__price-only">Only</p>
 										<p class="card__price-value">$497</p>
 									</div>
-									<a href="#" class="btn btn--white">Book now!</a>
+									<a href="#popup" class="btn btn--white">Book now!</a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<!--@ card column -->
+					<!--$ card column -->
 					<div class="col-1-of-3">
 						<div class="card">
 							<div class="card__side card__side--front">
@@ -269,14 +269,14 @@
 										<p class="card__price-only">Only</p>
 										<p class="card__price-value">$897</p>
 									</div>
-									<a href="#" class="btn btn--white">Book now!</a>
+									<a href="#popup" class="btn btn--white">Book now!</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!--@ tours button -->
+				<!--$ tours button -->
 				<div class="u-center-text u-mt-xl">
 					<a href="#" class="btn btn--green">Discover all tours</a>
 				</div>
@@ -284,32 +284,32 @@
 			</section>
 
 			<!--@ stories section -->
-			<section class="section-stories">
+			<section class="section-stories" id="stories">
 				<div class="bg-video">
 					<video class="bg-video__content" autoplay muted loop>
 						<source src="assets/img/video.mp4" type="video/mp4">
 						<source src="assets/img/video.webm" type="video/webm">
-						<!--@ show only if browser isn't supported -->
+						<!--$ show only if browser isn't supported -->
 						Your browser is not supported!
 					</video>
 				</div>
 
-				<!--@ secondary heading -->
+				<!--$ secondary heading -->
 				<div class="u-center-text u-mb-lg">
 					<h2 class="heading-secondary">We make people genuinely happy</h2>
 				</div>
 
-				<!--@ story row -->
+				<!--$ story row -->
 				<div class="row">
 					<div class="story">
 
-						<!--@ story image -->
+						<!--$ story image -->
 						<figure class="story__shape">
 							<img src="assets/img/nat-8.jpg" alt="Person on a tour" class="story__img" />
 							<figcaption class="story__caption">Mary Smith</figcaption>
 						</figure>
 
-						<!--@ story description -->
+						<!--$ story description -->
 						<div class="story__text">
 							<h3 class="heading-tertiary u-mb-sm">I had the best week ever with my family</h3>
 							<p>
@@ -321,17 +321,17 @@
 					</div>
 				</div>
 
-				<!--@ story row -->
+				<!--$ story row -->
 				<div class="row">
 
 					<div class="story">
-						<!--@ story image -->
+						<!--$ story image -->
 						<figure class="story__shape">
 							<img src="assets/img/nat-9.jpg" alt="Person on a tour" class="story__img" />
 							<figcaption class="story__caption">Jake Wilson</figcaption>
 						</figure>
 
-						<!--@ story description -->
+						<!--$ story description -->
 						<div class="story__text">
 							<h3 class="heading-tertiary u-mb-sm">Wow! my life is completely different now</h3>
 							<p>
@@ -342,47 +342,47 @@
 						</div>
 					</div>
 				</div>
-				<!--@ tours button -->
+				<!--$ tours button -->
 				<div class="u-center-text u-mt-xl">
 					<a href="#" class="btn-text">Read all stories &rarr;</a>
 				</div>
 			</section>
 
 			<!--@ book section -->
-			<section class="section-book">
-				<!--@ book row -->
+			<section class="section-book" id="book">
+				<!--$ book row -->
 				<div class="row">
 
-					<!--@ book white solid gradient background -->
+					<!--$ book white solid gradient background -->
 					<div class="book">
 
-						<!--@ book form -->
+						<!--$ book form -->
 						<div class="book__form">
 							<form action="#" class="form">
 
-								<!--@ form heading -->
+								<!--$ form heading -->
 								<div class="u-mb-md">
 									<h2 class="heading-secondary">
 										Start booking now
 									</h2>
 								</div>
 
-								<!--@ form text input -->
+								<!--$ form text input -->
 								<div class="form__group">
 									<input type="text" class="form__input" placeholder="Full name" id="name" required>
 									<label for="name" class="form__label">Full name</label>
 								</div>
 
-								<!--@ form email input -->
+								<!--$ form email input -->
 								<div class="form__group">
 									<input type="email" class="form__input" placeholder="Email address" id="email" required>
 									<label for="email" class="form__label">Email address</label>
 								</div>
 
-								<!--@ form radio button input -->
+								<!--$ form radio button input -->
 								<div class="form__group u-mb-md">
 
-									<!--@ radio btn 1 -->
+									<!--$ radio btn 1 -->
 									<div class="form__radio-group">
 										<input type="radio" class="form__radio-input" id="small" name="size" checked>
 										<label for="small" class="form__radio-label">
@@ -391,7 +391,7 @@
 										</label>
 									</div>
 
-									<!--@ radio btn 2 -->
+									<!--$ radio btn 2 -->
 									<div class="form__radio-group">
 										<input type="radio" class="form__radio-input" id="large" name="size">
 										<label for="large" class="form__radio-label">
@@ -401,7 +401,7 @@
 									</div>
 								</div>
 
-								<!--@ form btn  -->
+								<!--$ form btn  -->
 								<div class="form__group">
 									<button type="submit" class="btn btn--green">Next step &rarr;</button>
 								</div>
@@ -414,17 +414,17 @@
 		</main>
 
 		<!--@ FOOTER  -->
-		<footer class="footer">
+		<footer class="footer" id="footer">
 
-			<!--@ footer logo -->
+			<!--$ footer logo -->
 			<div class="footer__logo-box">
 				<img src="assets/img/logo-green-2x.png" alt="Full logo" class="footer__logo">
 			</div>
 
-			<!--@ footer row -->
+			<!--$ footer row -->
 			<div class="row">
 
-				<!--@ footer navigation column -->
+				<!--$ footer navigation column -->
 				<div class="col-1-of-2">
 					<div class="footer__navigation">
 						<ul class="footer__list">
@@ -437,7 +437,7 @@
 					</div>
 				</div>
 
-				<!--@ footer copyright column -->
+				<!--$ footer copyright column -->
 				<div class="col-1-of-2">
 					<p class="footer__copyright">
 						Built by <a href="#" class="footer__link devCKVargas">devCKVargas</a>. Coded along with <a href="#" class="footer__link">Jonas Schedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a> Copyright &copy; by Jonas Schedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schedtmann, is of course highly appreciated!
@@ -446,8 +446,31 @@
 			</div>
 		</footer>
 
+		<!--@ booking popup -->
+		<div class="popup" id="popup">
+			<div class="popup__content">
+
+				<!--$ left column -->
+				<div class="popup__left">
+					<img src="assets/img/nat-8.jpg" alt="Tour photo" class="popup__img">
+					<img src="assets/img/nat-9.jpg" alt="Tour photo" class="popup__img">
+				</div>
+
+				<!--$ right column -->
+				<div class="popup__right">
+					<a href="#tours" class="popup__close">&times;</a>
+					<h2 class="heading-secondary u-mb-sm">Start booking now</h2>
+					<h3 class="heading-tertiary u-mb-sm">Important &ndash; please read the terms and conditions first</h3>
+					<p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla. Nibh cras pulvinar mattis nunc sed blandit libero. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus mauris a diam maecenas sed enim ut sem. Est sit amet facilisis magna etiam tempor orci eu lobortis. Non sodales neque sodales ut etiam. Turpis egestas maecenas pharetra convallis posuere morbi. Eget mauris pharetra et ultrices neque. Turpis massa tincidunt dui ut ornare lectus. Enim lobortis scelerisque fermentum dui faucibus in ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla. Nibh cras pulvinar mattis nunc sed blandit libero. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus mauris a diam maecenas sed enim ut sem. Est sit amet facilisis magna etiam tempor orci eu lobortis. Non sodales neque sodales ut etiam. Turpis egestas maecenas pharetra convallis posuere morbi. Eget mauris pharetra et ultrices neque. Turpis massa tincidunt dui ut ornare lectus. Enim lobortis scelerisque fermentum dui faucibus in ornare.</p>
+					<!--$ button -->
+					<a href="#" class="btn btn--green">Book now</a>
+				</div>
+			</div>
+		</div>
+
 	</body>
-	<!-- <section class="grid-test">
+	<!-- 
+	<section class="grid-template">
 		<div class="row">
 			<div class="col-1-of-2">Col 1 of 2</div>
 			<div class="col-1-of-2">Col 1 of 2</div>
@@ -476,6 +499,7 @@
 			<div class="col-1-of-4">Col 1 of 4</div>
 			<div class="col-3-of-4">Col 3 of 4</div>
 		</div>
-	</section> -->
+	</section>
+	-->
 
 </html>

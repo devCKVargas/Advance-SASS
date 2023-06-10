@@ -1,14 +1,23 @@
 .header {
 	height: 95vh;
+	height: 95svh;
 	background: no-repeat top/cover;
-	background-image: linear-gradient(
-			to right bottom,
-			rgba($clr-primary-light, 0.8),
-			rgba($clr-primary-dark, 0.8)
-		),
+	background-image: linear-gradient(to right bottom, rgba($clr-primary-light, 0.8), rgba($clr-primary-dark, 0.8)),
 		url(../assets/img/hero.jpg);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	position: relative;
+
+	@include media(tab-port) {
+		height: 100vh;
+		height: 100svh;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+	}
+	@include media(mobile) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+	}
 
 	&__logo-box {
 		position: absolute;
@@ -20,9 +29,14 @@
 	}
 	&__text-box {
 		position: absolute;
-		top: 40%;
+		top: 45%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
+
+		@include media(tab-port) {
+			top: 50%;
+			left: 50%;
+		}
 	}
 }

@@ -1,6 +1,6 @@
 {
-	"name": "project",
-	"version": "0.1.0",
+	"name": "Natours",
+	"version": "0.1.2",
 	"description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
 	"main": "public/index.html",
 	"author": "devCKVargas",
@@ -28,6 +28,6 @@
 		"npm-run-all": "^4.1.5",
 		"onchange": "^7.1.0",
 		"postcss-cli": "^10.1.0",
-		"sass": "^1.62.1"
+		"sass": "^1.63.3"
 	}
 }

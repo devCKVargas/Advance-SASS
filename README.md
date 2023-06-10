@@ -1,4 +1,4 @@
-# [Advanced CSS and Sass: Flexbox, Grid, Animations and More!](bit.ly/advanced-CSS-SASS) 🎨🖼
+# [Advanced CSS and Sass: Flexbox, Grid, Animations and More!](https://bit.ly/advanced-CSS-SASS) 🎨🖼
 
 <!-- 👨‍💻 body -->
 

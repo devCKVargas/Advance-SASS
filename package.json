@@ -17,10 +17,9 @@
 		"watch": "npm-run-all --parallel watch:*",
 		"concat:css": "concat --output public/css/style.css public/css/icon-font.css public/css/main.css",
 		"serve": "browser-sync start --server public --files public --port 5500",
-		"start": "npm-run-all copy concat:* --parallel watch serve",
-		"build": "npm-run-all copy concat:* build:*",
-		"postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-		"todo": "Figure out how to combine concatenated & prefixed 👉 main.css in a single script"
+		"start": "npm-run-all copy --parallel watch serve",
+		"build": "npm-run-all copy:html build:*",
+		"postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
 	},
 	"dependencies": {
 		"autoprefixer": "^10.4.14",

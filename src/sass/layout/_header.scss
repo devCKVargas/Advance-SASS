@@ -3,10 +3,22 @@
 	height: 95svh;
 	background: no-repeat top/cover;
 	background-image: linear-gradient(to right bottom, rgba($clr-primary-light, 0.8), rgba($clr-primary-dark, 0.8)),
-		url(../assets/img/hero.jpg);
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		url(../../assets/img/hero-small.jpg);
 	position: relative;
+
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	}
+
+	//? 192dpi = DPR 2.0 // Apple Retina Display
+	//$ if (Density 2x && min-reso >= 600px) || (width >= 1800px)
+	@media (min-resolution: 192dpi) and (min-width: 37.5em),
+		(-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+		(min-width: 112.5em) {
+		background-image: linear-gradient(to right bottom, rgba($clr-tertiary-light, 0.8), rgba($clr-tertiary-dark, 0.8)),
+			url(../../assets/img/hero.jpg);
+	}
 
 	@include media(tab-port) {
 		height: 100vh;

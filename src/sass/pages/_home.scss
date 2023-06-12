@@ -1,25 +1,20 @@
 .section-about {
 	background-color: $clr-gray-light-1;
-	padding: 25vh 0 35vh 0;
-	padding: 25svh 0 35svh 0;
+	padding: 25vh 0 35rem 0;
+	padding: 25svh 0 35rem 0;
 	margin-top: -20vh;
 	margin-top: -20svh;
 
-	@include media(tab-port) {
-		// padding-top: 25svh;
-		// padding-bottom: 35svh;
-	}
-
 	@include media(mobile) {
-		padding-top: 28vh;
-		padding-top: 28svh;
+		padding: 28vh 0 25rem 0;
+		padding: 28svh 0 25rem 0;
 	}
 }
 
 .section-features {
 	padding: 20rem 0;
 	background-image: linear-gradient(to right bottom, rgba($clr-primary-light, 0.8), rgba($clr-primary-dark, 0.8)),
-		url(../assets/img/nat-4.jpg);
+		url(../../assets/img/nat-4.jpg);
 	background-size: cover;
 	transform: skewY(-7deg);
 	margin-top: -16rem;
@@ -66,22 +61,18 @@
 
 .book-container {
 	background-image: linear-gradient(105deg, rgba($clr-white, 0.9) 0%, rgba($clr-white, 0.9) 50%, transparent 50%),
-		url(../assets/img/nat-10.jpg);
-	background-size: 100%;
+		url(../../assets/img/nat-10.jpg);
+	background-size: cover;
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem $shadow-clr-2;
 
 	// height: 50rem; //$ before content is placed (test only)
 	height: auto;
 
-	@include media(tab-land) {
-		background-image: linear-gradient(105deg, rgba($clr-white, 0.9) 0%, rgba($clr-white, 0.9) 65%, transparent 65%),
-			url(../assets/img/nat-10.jpg);
-		background-size: cover;
-	}
 	@include media(tab-port) {
 		background-image: linear-gradient(to right, rgba($clr-white, 0.9) 0%, rgba($clr-white, 0.9) 100%),
-			url(../assets/img/nat-10.jpg);
+			url(../../assets/img/nat-10.jpg);
+		background-position: center;
 	}
 
 	&__form {
@@ -89,7 +80,8 @@
 		padding: 6rem;
 
 		@include media(tab-land) {
-			width: 65%;
+			// width: 60%;
+			width: max(55%, 550px);
 		}
 
 		@include media(tab-port) {

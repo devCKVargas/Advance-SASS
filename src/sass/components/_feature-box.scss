@@ -16,8 +16,8 @@
 		font-size: 6rem;
 		margin-bottom: 0.5rem;
 		background-image: linear-gradient(to right, $clr-primary-light, $clr-primary-dark);
-		background-clip: text;
 		-webkit-background-clip: text;
+		background-clip: text;
 		color: transparent;
 
 		@include media(tab-port) {

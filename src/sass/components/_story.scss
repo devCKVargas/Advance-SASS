@@ -32,15 +32,19 @@
 		width: 15rem; //* required 0️⃣
 		height: 15rem; //* required 0️⃣
 		float: left; //* required 0️⃣
-
-		//* Wrap text around shape element 0️⃣
-		-webkit-shape-outside: circle(50% at 50% 50%);
-		shape-outside: circle(50% at 50% 50%);
-		//* Turn shape element into a circle 1️⃣
-		-webkit-clip-path: circle(50% at 50% 50%);
-		clip-path: circle(50% at 50% 50%);
-
+		overflow: hidden;
+		border-radius: 50%;
 		transform: translateX(-3rem) skewX(12deg);
+
+		@supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+			//* Wrap text around shape element 0️⃣
+			-webkit-shape-outside: circle(50% at 50% 50%);
+			shape-outside: circle(50% at 50% 50%);
+			//* Turn shape element into a circle 1️⃣
+			-webkit-clip-path: circle(50% at 50% 50%);
+			clip-path: circle(50% at 50% 50%);
+			border-radius: none;
+		}
 
 		@include media(tab-port) {
 			margin: 1rem;

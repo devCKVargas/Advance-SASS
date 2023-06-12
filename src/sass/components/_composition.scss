@@ -57,9 +57,10 @@
 
 		&--p3 {
 			top: 10rem;
-			left: 20%;
+			left: 11rem;
 
 			@include media(tab-port) {
+				float: right;
 				top: 2rem;
 				left: 4rem;
 				z-index: 0;

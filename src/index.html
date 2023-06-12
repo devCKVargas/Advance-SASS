@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<!--$ meta tags -->
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="Chris King Vargas">
-		<meta name="description" content="Natours landing page">
+		<meta name="author" content="Chris King Vargas" />
+		<meta name="description" content="Natours landing page" />
 
 		<!--$ Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+		<!-- <link rel="stylesheet" href="/css/icon-font.css" /> -->
 
 		<!--$ CSS -->
 
@@ -19,23 +19,20 @@
 		<link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
 
 		<!--$ favicon -->
-		<link rel="shortcut icon" type="image/png" href="assets/img/favicon.webp" />
+		<link rel="shortcut icon" type="image/png" href="/assets/img/favicon.webp" />
 
 		<!--$ style -->
-		<link rel="stylesheet" href="css/icon-font.css" />
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 
 		<!--$ title -->
 		<title>Natours | Exciting tours for adventurous people</title>
 	</head>
 
 	<body>
-
 		<!--@ NAVIGATION  -->
 		<div class="navigation">
-
 			<!--$ nav toggle-->
-			<input type="checkbox" name="" id="navi-toggle" class="navigation__checkbox">
+			<input type="checkbox" id="navi-toggle" class="navigation__checkbox" aria-label="Navigation" />
 			<label for="navi-toggle" class="navigation__button">
 				<span class="navigation__icon"></span>
 			</label>
@@ -46,18 +43,27 @@
 			<!--$ nav -->
 			<nav class="navigation__nav">
 				<ul class="navigation__list">
-					<li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book Now</a></li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link"><span>01</span>About Natours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link"><span>02</span>Your benefits</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link"><span>03</span>Popular tours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link"><span>04</span>Stories</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link"><span>05</span>Book Now</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
 
 		<!--@ HEADER -->
 		<header class="header">
-
 			<!--$ header logo -->
 			<div class="header__logo-box">
 				<img src="assets/img/logo-white.png" alt="logo" class="header__logo" />
@@ -77,10 +83,8 @@
 
 		<!--@ MAIN -->
 		<main>
-
 			<!--@ about section -->
 			<section class="section-about" id="about">
-
 				<!--$ secondary heading -->
 				<div class="u-center-text u-mb-lg">
 					<h2 class="heading-secondary">Exciting tours for adventurous people</h2>
@@ -88,13 +92,12 @@
 
 				<!--$ row -->
 				<div class="row">
-
 					<!--$ text content column -->
 					<div class="col-1-of-2">
 						<h3 class="heading-tertiary u-mb-sm">You're going to fall in love with nature</h3>
 						<p class="paragraph">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-							ducimus quam nisi exercitationem omnis earum qui.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero
+							repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
 						</p>
 						<h3 class="heading-tertiary u-mb-sm">Live adventures like you never have before</h3>
 						<p class="paragraph">
@@ -104,11 +107,31 @@
 					</div>
 
 					<!--$ image composition column -->
+					<!--$ responsive logo: art direction -->
 					<div class="col-1-of-2">
 						<div class="composition">
-							<img src="assets/img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
+							<img
+								srcset="assets/img/nat-1.jpg 300w, assets/img/nat-1-large.jpg 1000w"
+								sizes="(max-width: 900px) 33vw, (max-width: 600px) 60vw, 1000px"
+								src="assets/img/nat-1-large.jpg"
+								alt="Photo 1"
+								class="composition__photo composition__photo--p1" />
+							<img
+								src="assets/img/nat-2-large.jpg"
+								srcset="assets/img/nat-2.jpg 300w, assets/img/nat-2-large.jpg 1000w"
+								sizes="(max-width: 900px) 33vw, (max-width: 600px) 60vw, 1000px"
+								alt="Photo 2"
+								class="composition__photo composition__photo--p2" />
+							<img
+								src="assets/img/nat-3-large.jpg"
+								srcset="assets/img/nat-3.jpg 300w, assets/img/nat-3-large.jpg 1000w"
+								sizes="(max-width: 900px) 33vw, (max-width: 600px) 60vw, 1000px"
+								alt="Photo 3"
+								class="composition__photo composition__photo--p3" />
+
+							<!-- <img src="assets/img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
 							<img src="assets/img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
-							<img src="assets/img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" />
+							<img src="assets/img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" /> -->
 						</div>
 					</div>
 				</div>
@@ -116,10 +139,8 @@
 
 			<!--@ features section -->
 			<section class="section-features" id="features">
-
 				<!--$ row -->
 				<div class="row">
-
 					<!--$ feature box column -->
 					<div class="col-1-of-4">
 						<div class="feature-box">
@@ -168,7 +189,6 @@
 
 			<!--@ tours section -->
 			<section class="section-tours" id="tours">
-
 				<!--$ tours heading -->
 				<div class="u-center-text u-mb-lg">
 					<h2 class="heading-secondary">Most popular tours</h2>
@@ -176,14 +196,11 @@
 
 				<!--$ row -->
 				<div class="row">
-
 					<!--$ card column -->
 					<div class="col-1-of-3">
 						<div class="card">
 							<div class="card__side card__side--front">
-								<div class="card__picture card__picture--1">
-									&nbsp;
-								</div>
+								<div class="card__picture card__picture--1">&nbsp;</div>
 								<h4 class="card__heading">
 									<span class="card__heading-span card__heading-span--1">The Sea Explorer</span>
 								</h4>
@@ -213,9 +230,7 @@
 					<div class="col-1-of-3">
 						<div class="card">
 							<div class="card__side card__side--front">
-								<div class="card__picture card__picture--2">
-									&nbsp;
-								</div>
+								<div class="card__picture card__picture--2">&nbsp;</div>
 								<h4 class="card__heading">
 									<span class="card__heading-span card__heading-span--2">The Forest Hiker</span>
 								</h4>
@@ -228,7 +243,6 @@
 										<li>Difficulty: medium</li>
 									</ul>
 								</div>
-
 							</div>
 							<div class="card__side card__side--back card__side--back-2">
 								<div class="card__cta">
@@ -246,9 +260,7 @@
 					<div class="col-1-of-3">
 						<div class="card">
 							<div class="card__side card__side--front">
-								<div class="card__picture card__picture--3">
-									&nbsp;
-								</div>
+								<div class="card__picture card__picture--3">&nbsp;</div>
 								<h4 class="card__heading">
 									<span class="card__heading-span card__heading-span--3">The Snow Adventurer</span>
 								</h4>
@@ -261,7 +273,6 @@
 										<li>Difficulty: hard</li>
 									</ul>
 								</div>
-
 							</div>
 							<div class="card__side card__side--back card__side--back-3">
 								<div class="card__cta">
@@ -280,15 +291,14 @@
 				<div class="u-center-text u-mt-xl">
 					<a href="#" class="btn btn--green">Discover all tours</a>
 				</div>
-
 			</section>
 
 			<!--@ stories section -->
 			<section class="section-stories" id="stories">
 				<div class="bg-video">
 					<video class="bg-video__content" autoplay muted loop>
-						<source src="assets/img/video.mp4" type="video/mp4">
-						<source src="assets/img/video.webm" type="video/webm">
+						<source src="assets/img/video.mp4" type="video/mp4" />
+						<source src="assets/img/video.webm" type="video/webm" />
 						<!--$ show only if browser isn't supported -->
 						Your browser is not supported!
 					</video>
@@ -302,10 +312,14 @@
 				<!--$ story row -->
 				<div class="row">
 					<div class="story">
-
 						<!--$ story image -->
 						<figure class="story__shape">
-							<img src="assets/img/nat-8.jpg" alt="Person on a tour" class="story__img" />
+							<img
+								srcset="assets/img/nat-8.jpg 600w, assets/img/nat-8-large.jpg 2000w"
+								sizes="(max-width: 900px) 33vw 2000px"
+								src="assets/img/nat-8-large.jpg"
+								alt="Person on a tour"
+								class="story__img" />
 							<figcaption class="story__caption">Mary Smith</figcaption>
 						</figure>
 
@@ -313,9 +327,9 @@
 						<div class="story__text">
 							<h3 class="heading-tertiary u-mb-sm">I had the best week ever with my family</h3>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-								ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-								repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero
+								repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
+								aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
 							</p>
 						</div>
 					</div>
@@ -323,11 +337,15 @@
 
 				<!--$ story row -->
 				<div class="row">
-
 					<div class="story">
 						<!--$ story image -->
 						<figure class="story__shape">
-							<img src="assets/img/nat-9.jpg" alt="Person on a tour" class="story__img" />
+							<img
+								srcset="assets/img/nat-9.jpg 600w, assets/img/nat-9-large.jpg 2000w"
+								sizes="(max-width: 900px) 33vw 2000px"
+								src="assets/img/nat-9-large.jpg"
+								alt="Person on a tour"
+								class="story__img" />
 							<figcaption class="story__caption">Jake Wilson</figcaption>
 						</figure>
 
@@ -335,9 +353,9 @@
 						<div class="story__text">
 							<h3 class="heading-tertiary u-mb-sm">Wow! my life is completely different now</h3>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-								ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-								repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero
+								repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
+								aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
 							</p>
 						</div>
 					</div>
@@ -352,39 +370,33 @@
 			<section class="section-book" id="book">
 				<!--$ book row -->
 				<div class="row">
-
 					<!--$ book white solid gradient background -->
 					<div class="book-container">
-
 						<!--$ book form -->
 						<div class="book-container__form">
 							<form action="#" class="form">
-
 								<!--$ form heading -->
 								<div class="u-mb-md">
-									<h2 class="heading-secondary">
-										Start booking now
-									</h2>
+									<h2 class="heading-secondary">Start booking now</h2>
 								</div>
 
 								<!--$ form text input -->
 								<div class="form__group">
-									<input type="text" class="form__input" placeholder="Full name" id="name" required>
+									<input type="text" class="form__input" placeholder="Full name" id="name" required />
 									<label for="name" class="form__label">Full name</label>
 								</div>
 
 								<!--$ form email input -->
 								<div class="form__group">
-									<input type="email" class="form__input" placeholder="Email address" id="email" required>
+									<input type="email" class="form__input" placeholder="Email address" id="email" required />
 									<label for="email" class="form__label">Email address</label>
 								</div>
 
 								<!--$ form radio button input -->
 								<div class="form__group u-mb-md">
-
 									<!--$ radio btn 1 -->
 									<div class="form__radio-group">
-										<input type="radio" class="form__radio-input" id="small" name="size" checked>
+										<input type="radio" class="form__radio-input" id="small" name="size" checked />
 										<label for="small" class="form__radio-label">
 											<span class="form__radio-button"></span>
 											Small tour group
@@ -393,7 +405,7 @@
 
 									<!--$ radio btn 2 -->
 									<div class="form__radio-group">
-										<input type="radio" class="form__radio-input" id="large" name="size">
+										<input type="radio" class="form__radio-input" id="large" name="size" />
 										<label for="large" class="form__radio-label">
 											<span class="form__radio-button"></span>
 											Large tour group
@@ -406,7 +418,6 @@
 									<button type="submit" class="btn btn--green">Next step &rarr;</button>
 								</div>
 							</form>
-
 						</div>
 					</div>
 				</div>
@@ -415,15 +426,22 @@
 
 		<!--@ FOOTER  -->
 		<footer class="footer" id="footer">
-
 			<!--$ footer logo -->
 			<div class="footer__logo-box">
-				<img src="assets/img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+				<!--$ responsive logo: art direction -->
+				<picture class="footer__logo">
+					<source
+						srcset="assets/img/logo-green-small-1x.png 1x, assets/img/logo-green-small-2x.png 2x"
+						media="(max-width: 37.5em)" />
+					<img
+						srcset="assets/img/logo-green-1x.png 1x, assets/img/logo-green-2x.png 2x"
+						src="assets/img/logo-green-2x.png"
+						alt="Full logo" />
+				</picture>
 			</div>
 
 			<!--$ footer row -->
 			<div class="row">
-
 				<!--$ footer navigation column -->
 				<div class="col-1-of-2">
 					<div class="footer__navigation">
@@ -440,7 +458,11 @@
 				<!--$ footer copyright column -->
 				<div class="col-1-of-2">
 					<p class="footer__copyright">
-						Built by <a href="#" class="footer__link devCKVargas">devCKVargas</a>. Coded along with <a href="#" class="footer__link">Jonas Schedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a> Copyright &copy; by Jonas Schedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schedtmann, is of course highly appreciated!
+						Built by <a href="#" class="footer__link devCKVargas">devCKVargas</a>. Coded along with
+						<a href="#" class="footer__link">Jonas Schedtmann</a> for his online course
+						<a href="#" class="footer__link">Advanced CSS and Sass</a> Copyright &copy; by Jonas Schedtmann. You are
+						100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own
+						design. A credit to the original author, Jonas Schedtmann, is of course highly appreciated!
 					</p>
 				</div>
 			</div>
@@ -449,11 +471,10 @@
 		<!--@ booking tours section popup -->
 		<div class="popup" id="popup">
 			<div class="popup__content">
-
 				<!--$ left column -->
 				<div class="popup__left">
-					<img src="assets/img/nat-8.jpg" alt="Tour photo" class="popup__img">
-					<img src="assets/img/nat-9.jpg" alt="Tour photo" class="popup__img">
+					<img src="assets/img/nat-8.jpg" alt="Tour photo" class="popup__img" />
+					<img src="assets/img/nat-9.jpg" alt="Tour photo" class="popup__img" />
 				</div>
 
 				<!--$ right column -->
@@ -461,13 +482,26 @@
 					<a href="#tours" class="popup__close">&times;</a>
 					<h2 class="heading-secondary u-mb-sm">Start booking now</h2>
 					<h3 class="heading-tertiary u-mb-sm">Important &ndash; please read the terms and conditions first</h3>
-					<p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla. Nibh cras pulvinar mattis nunc sed blandit libero. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus mauris a diam maecenas sed enim ut sem. Est sit amet facilisis magna etiam tempor orci eu lobortis. Non sodales neque sodales ut etiam. Turpis egestas maecenas pharetra convallis posuere morbi. Eget mauris pharetra et ultrices neque. Turpis massa tincidunt dui ut ornare lectus. Enim lobortis scelerisque fermentum dui faucibus in ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla. Nibh cras pulvinar mattis nunc sed blandit libero. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus mauris a diam maecenas sed enim ut sem. Est sit amet facilisis magna etiam tempor orci eu lobortis. Non sodales neque sodales ut etiam. Turpis egestas maecenas pharetra convallis posuere morbi. Eget mauris pharetra et ultrices neque. Turpis massa tincidunt dui ut ornare lectus. Enim lobortis scelerisque fermentum dui faucibus in ornare.</p>
+					<p class="popup__text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla. Nibh cras pulvinar mattis nunc sed
+						blandit libero. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus mauris a
+						diam maecenas sed enim ut sem. Est sit amet facilisis magna etiam tempor orci eu lobortis. Non sodales neque
+						sodales ut etiam. Turpis egestas maecenas pharetra convallis posuere morbi. Eget mauris pharetra et ultrices
+						neque. Turpis massa tincidunt dui ut ornare lectus. Enim lobortis scelerisque fermentum dui faucibus in
+						ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+						et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla. Nibh cras pulvinar mattis nunc sed
+						blandit libero. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus mauris a
+						diam maecenas sed enim ut sem. Est sit amet facilisis magna etiam tempor orci eu lobortis. Non sodales neque
+						sodales ut etiam. Turpis egestas maecenas pharetra convallis posuere morbi. Eget mauris pharetra et ultrices
+						neque. Turpis massa tincidunt dui ut ornare lectus. Enim lobortis scelerisque fermentum dui faucibus in
+						ornare.
+					</p>
 					<!--$ button -->
 					<a href="#" class="btn btn--green">Book now</a>
 				</div>
 			</div>
 		</div>
-
 	</body>
 	<!-- 
 	<section class="grid-template">
@@ -501,5 +535,4 @@
 		</div>
 	</section>
 	-->
-
 </html>

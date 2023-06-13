@@ -9,9 +9,7 @@
 //* own scrollbar */
 html {
 	/* scrollbar firefox */
-	@supports (scrollbar-color: rgb(1, 1, 1) rgb(110, 110, 110)) {
 		scrollbar-color: rgb(1, 1, 1) rgb(110, 110, 110);
-	}
 }
 
 /* Note: The -webkit-scrollbar is not supported by Firefox or IE and Edge. */
@@ -77,4 +75,9 @@ body {
 	@include media(tab-port) {
 		padding: 0;
 	}
+}
+
+::selection{
+	background-color: $clr-primary;
+	color: $clr-white;
 }

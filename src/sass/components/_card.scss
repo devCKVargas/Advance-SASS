@@ -157,7 +157,8 @@
 	}
 
 	//$ BACK SIDE MEDIA QUERY
-	@include media(tab-port) {
+	//@include media(tab-port) {
+	@media only screen and (max-width: 56.5em), only screen and (hover: none) {
 		//? FUNCTIONALITY
 		height: auto;
 		background-color: $clr-white;
@@ -205,7 +206,7 @@
 		&__price-value {
 			font-size: 8rem;
 
-			@include media(mobile) {
+			@include media(tab-land) {
 				font-size: 6rem;
 			}
 		}

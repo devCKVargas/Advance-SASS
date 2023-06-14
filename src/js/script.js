@@ -31,8 +31,3 @@ document.addEventListener("click", (event) => {
 		}
 	}
 });
-
-//TODO: close navMenu && popup when user pressed back button
-// window.addEventListener("popstate", () => {
-// 	// if (navMenu.checked) navMenu.checked = false;
-// });

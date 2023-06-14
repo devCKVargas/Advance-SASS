@@ -1,7 +1,7 @@
 {
-	"name": "Trello",
+	"name": "Trillo",
 	"version": "0.1.0",
-	"description": "Trello clone using Flexbox",
+	"description": "Trillo &mdash; Your all-in-one booking app",
 	"main": "public/index.html",
 	"author": "devCKVargas",
 	"scripts": {
@@ -24,6 +24,7 @@
 		"build": "npm-run-all copy:* build:* addprefix"
 	},
 	"dependencies": {
+		"@csstools/normalize.css": "^12.0.0",
 		"autoprefixer": "^10.4.14",
 		"browser-sync": "^2.29.3",
 		"concat": "^1.0.3",
@@ -33,5 +34,10 @@
 		"onchange": "^7.1.0",
 		"postcss-cli": "^10.1.0",
 		"sass": "^1.63.4"
+	},
+	"devDependencies": {
+		"stylelint": "^15.7.0",
+		"stylelint-prettier": "^3.0.0",
+		"webpack": "^5.86.0"
 	}
 }

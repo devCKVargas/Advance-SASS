@@ -1,16 +1,16 @@
-//@ abstracts
-@import "/abstracts/variables";
-@import "/abstracts/mixins";
-@import "/abstracts/functions";
+//$ abstracts
+// @import "abstracts/variables";
+@import "abstracts/mixins";
+// @import "abstracts/_functions.scss";
 
-//@ base
-@import "/base/base";
+//$ base
+@import "base/base";
 
-//@ components
-// @import "components/";
+//$ components
+@import "components/components";
 
-//@ layout
-@import "/layout/header";
+//$ layout
+@import "layout/layout";
 
-//@ pages
-@import "/pages/home";
+//$ pages
+// @import "pages/_home.scss";

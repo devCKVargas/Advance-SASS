@@ -1,0 +1,43 @@
+.wrapper {
+	max-width: 120rem;
+	margin: 8rem auto;
+	background-color: var(--clr-gray-light-2);
+	box-shadow: var(--shadow-dark);
+
+	// test
+	min-height: 50rem;
+}
+
+.header {
+	font-size: 1.6rem;
+	height: 7rem;
+	background-color: var(--clr-white);
+	border-bottom: var(--clr-gray-light-2);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+}
+
+.sidebar {
+	background-color: var(--clr-gray-dark-1);
+	flex: 0 0 18%; //$ grow, shrink, basis
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hotel-view {
+	background-color: var(--clr-white);
+
+	// test
+	background-color: darksalmon;
+	height: 100rem;
+
+	flex: 1;
+}

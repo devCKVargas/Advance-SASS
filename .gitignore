@@ -1,0 +1,9 @@
+# Ignore
+node_modules/
+public/
+
+# all .json files
+*.json 
+
+# Exclude
+!package.json

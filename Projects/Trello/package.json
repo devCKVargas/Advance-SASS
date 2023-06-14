@@ -1,7 +1,7 @@
 {
-	"name": "Natours",
-	"version": "0.1.2",
-	"description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
+	"name": "Trello",
+	"version": "0.1.0",
+	"description": "Trello clone using Flexbox",
 	"main": "public/index.html",
 	"author": "devCKVargas",
 	"scripts": {
@@ -32,6 +32,6 @@
 		"npm-run-all": "^4.1.5",
 		"onchange": "^7.1.0",
 		"postcss-cli": "^10.1.0",
-		"sass": "^1.63.3"
+		"sass": "^1.63.4"
 	}
 }

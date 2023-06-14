@@ -16,11 +16,11 @@
 
 ## Basic Responsive Design Principles
 
-- [ ] Fluid Grids & Layouts
-- [ ] Flexible / Responsive images
-- [ ] Media Queries
+- [x] Fluid Grids & Layouts
+- [x] Flexible / Responsive images
+- [x] Media Queries
 
-## Build something using the ff layouts
+## Build a website using the ff layouts
 
 1. [ ] Float
 2. [ ] Flexbox
@@ -28,7 +28,7 @@
 
 ## Maintainable & scalable code: 7-1 Pattern
 
-- [ ]
+- [x] 
 
 <!-- 🦶 Footer  -->
 <!-- created using: https://markdownlivepreview.com/ -->

@@ -19,8 +19,8 @@
 		"watch": "npm-run-all --parallel watch:*",
 		"concat:css": "concat --output public/css/style.css public/css/icon-font.css public/css/main.css",
 		"addprefix": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-		"serve": "browser-sync start --server public --files public --port 5500",
-		"start": "npm-run-all copy addprefix --parallel watch serve",
+		"serve": "browser-sync start --server public --files public --port 5501",
+		"start": "npm-run-all copy --parallel watch serve",
 		"build": "npm-run-all copy:* build:* addprefix"
 	},
 	"dependencies": {
@@ -34,10 +34,5 @@
 		"onchange": "^7.1.0",
 		"postcss-cli": "^10.1.0",
 		"sass": "^1.63.4"
-	},
-	"devDependencies": {
-		"stylelint": "^15.7.0",
-		"stylelint-prettier": "^3.0.0",
-		"webpack": "^5.86.0"
 	}
 }

@@ -3,7 +3,6 @@ node_modules/
 public/
 
 # all .json files
-*.json 
+package-lock.json 
 
 # Exclude
-!package.json

@@ -2,31 +2,32 @@
 <html lang="en">
 
 	<head>
-		<!--$ meta tags -->
+		<!--@ meta tags -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Chris King Vargas" />
 		<meta name="description" content="Trillo app using Flexbox" />
 
-		<!--$ font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!--@ font -->
+		<link rel="preconnect" href="https://api.fonts.coollabs.io" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+		<link href="https://api.fonts.coollabs.io
+/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
 
-		<!--$ favicon -->
+		<!--@ favicon -->
 		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
-		<!--$ CSS -->
-		<!--$ normalized -->
+		<!--@ CSS -->
+		<!--@ normalized -->
 		<link rel="stylesheet" href="css/normalized.css" />
 
-		<!--$ style -->
+		<!--@ style -->
 		<link rel="stylesheet" href="css/main.css" />
 
-		<!--$ js -->
+		<!--@ js -->
 		<!-- <script defer src="/js/script.js"></script> -->
 
-		<!--$ title -->
+		<!--@ title -->
 		<title>Trillo app using Flexbox</title>
 	</head>
 
@@ -35,73 +36,72 @@
 		<div class="wrapper">
 			<header class="header">
 				<img src="assets/img/logo.png" alt="trillio logo" class="logo" />
-
+				<!-- @ Search input -->
 				<form action="#" class="search">
-					<input type="text" class="search__input" placeholder="Search hotels" />
-					<button class="search__button">
+					<input type="text" class="search__input" placeholder="Search hotels" aria-label="Search hotels" />
+					<button type="button" class="search__button" aria-label="Search button">
 						<!--$ use svg from sprite.svg (only for live servers) -->
 						<svg class="search__icon">
 							<use xlink:href="assets/svg/sprite.svg#icon-magnifying-glass"></use>
 						</svg>
 					</button>
 				</form>
-
-				<nav class="user-nav">
-
+				<!-- @ User navigation -->
+				<nav class="user-nav" aria-label="Profile navigation">
 					<div class="user-nav__icon-box">
-						<svg class="user-nav__icon">
+						<svg class="user-nav__icon" role="img" aria-label="Bookmark">
 							<use xlink:href="assets/svg/sprite.svg#icon-bookmark"></use>
 						</svg>
 						<span class="user-nav__notification">7</span>
 					</div>
 					<div class="user-nav__icon-box">
-						<svg class="user-nav__icon">
+						<svg class="user-nav__icon" role="img" aria-label="Chat">
 							<use xlink:href="assets/svg/sprite.svg#icon-chat"></use>
 						</svg>
 						<span class="user-nav__notification">13</span>
 					</div>
 					<div class="user-nav__user">
-						<img src="assets/img/user.jpg" alt="User photo" class="user-nav__user-photo" />
-						<span class="user-nav__user-name">Jonas</span>
+						<img src="assets/img/user-ck.jpg" alt="User photo" class="user-nav__user-photo" />
+						<span class="user-nav__user-name">CK</span>
 					</div>
 
 				</nav>
 			</header>
-
+			<!-- @ content -->
 			<div class="content">
-
-				<nav class="sidebar">
+				<!-- @ sidebar -->
+				<nav class="sidebar" aria-label="Navigation">
 					<ul class="side-nav">
 						<li class="side-nav__item side-nav__item--active">
 							<a href="#" class="side-nav__link">
-								<svg class="side-nav__icon">
+								<svg class="side-nav__icon" aria-labelledby="hotel">
 									<use xlink:href="assets/svg/sprite.svg#icon-home"></use>
 								</svg>
-								<span>Hotel</span>
+								<span id="hotel">Hotel</span>
 							</a>
 						</li>
 						<li class="side-nav__item">
 							<a href="#" class="side-nav__link">
-								<svg class="side-nav__icon">
+								<svg class="side-nav__icon" aria-labelledby="flight">
 									<use xlink:href="assets/svg/sprite.svg#icon-aircraft-take-off"></use>
 								</svg>
-								<span>Flight</span>
+								<span id="flight">Flight</span>
 							</a>
 						</li>
 						<li class="side-nav__item">
 							<a href="#" class="side-nav__link">
-								<svg class="side-nav__icon">
+								<svg class="side-nav__icon" aria-labelledby="car-rental">
 									<use xlink:href="assets/svg/sprite.svg#icon-key"></use>
 								</svg>
-								<span>Car rental</span>
+								<span id="car-rental">Car rental</span>
 							</a>
 						</li>
 						<li class="side-nav__item">
 							<a href="#" class="side-nav__link">
-								<svg class="side-nav__icon">
+								<svg class="side-nav__icon" aria-labelledby="tours">
 									<use xlink:href="assets/svg/sprite.svg#icon-map"></use>
 								</svg>
-								<span>Tours</span>
+								<span id="tours">Tours</span>
 							</a>
 						</li>
 					</ul>
@@ -109,12 +109,16 @@
 					<div class="legal">&copy; 2017 by trillo. All rights reserved.</div>
 
 				</nav>
-
+				<!-- @ main -->
 				<main class="hotel-view">
-
+					<!-- @ gallery -->
 					<div class="gallery">
 						<figure class="gallery__item">
-							<a href="#"><img src="assets/img/hotel-1.jpg" alt="Photo of hotel 1" class="gallery__photo"></a>
+							<a href="#"><img src="assets/img/hotel-1.jpg" alt="Front photo of Okada Manila Resort & Casino"
+									  class="gallery__photo"></a>
+						</figure>
+						<figure class="gallery__item">
+							<a href="#"><img src="assets/img/hotel-4.jpg" alt="Photo of hotel 4" class="gallery__photo"></a>
 						</figure>
 						<figure class="gallery__item">
 							<a href="#"><img src="assets/img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo"></a>
@@ -123,65 +127,82 @@
 							<a href="#"><img src="assets/img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo"></a>
 						</figure>
 					</div>
-
+					<!-- @ hotel overview -->
 					<div class="overview">
-						<h1 class="overview__heading">Hotel Las Palmas</h1>
+						<h1 class="overview__heading">Okada Manila</h1>
 						<div class="overview__stars">
-							<svg class="overview__icon-star">
+							<svg class="overview__icon-star" aria-hidden="true">
 								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
 							</svg>
-							<svg class="overview__icon-star">
+							<svg class="overview__icon-star" aria-hidden="true">
 								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
 							</svg>
-							<svg class="overview__icon-star">
+							<svg class="overview__icon-star" aria-hidden="true">
 								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
 							</svg>
-							<svg class="overview__icon-star">
+							<svg class="overview__icon-star" aria-hidden="true">
 								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
 							</svg>
-							<svg class="overview__icon-star">
+							<svg class="overview__icon-star" aria-hidden="true">
 								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
 							</svg>
 						</div>
-
+						<!-- @ hotel location -->
 						<div class="overview__location">
-							<svg class="overview__icon-location">
+							<svg class="overview__icon-location" aria-labelledby="location">
 								<use xlink:href="assets/svg/sprite.svg#icon-location-pin"></use>
 							</svg>
-							<button class="btn-inline">Albufeira, Portugal</button>
+							<button type="button" class="btn-inline" id="location">Manila, Philippines</button>
 						</div>
-
+						<!-- @ hotel rating -->
 						<div class="overview__rating">
-							<div class="overview__rating-average">8.6</div>
-							<div class="overview__rating-count">429 votes</div>
+							<div class="overview__rating-average">9.1</div>
+							<div class="overview__rating-count">2,714 votes</div>
 						</div>
-
 					</div>
-
+					<!-- @ details -->
 					<div class="detail">
+						<!-- @ description -->
 						<div class="description">
 							<p class="paragraph">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi
-								dignissimos debitis ratione sapiente saepe.
-								Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+								Okada Manila is a 5-star city resort in the entertainment district of Manila, overlooking the
+								scenic Manila Bay.
 							</p>
 							<p class="paragraph">
-								Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto
-								voluptate delectus,
-								inventore iure aliquid
-								aliquam.
+								The resort features a casino, a spa, an outdoor pool, and a dancing fountain that rivals the
+								ones in Las Vegas and Dubai.
 							</p>
-
+							<p class="paragraph">
+								Guests can choose from over 21 dining options, including Michelin-starred chefs' creations,
+								Asian cuisines, and casual
+								eateries
+							</p>
+							<p class="paragraph">
+								The rooms are spacious and luxurious, with amenities like linen service, blackout curtains, and
+								in-room video streaming
+							</p>
+							<p class="paragraph">
+								The resort is close to popular attractions like SM Mall of Asia, SMX Convention Center, and Star
+								City Amusement Park
+							</p>
+							<p class="paragraph">
+								Okada Manila is a grand icon of Manila, offering a one-of-a-kind experience of pleasure and
+								leisure
+							</p>
+							<!-- @ descriptive list -->
 							<ul class="list">
-								<li class="list__item">Close to the beach</li>
+								<li class="list__item">Astonishing views</li>
 								<li class="list__item">Breakfast included</li>
 								<li class="list__item">Free airport shuttle</li>
 								<li class="list__item">Free wifi in all rooms</li>
 								<li class="list__item">Air conditioning and heating</li>
+								<li class="list__item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
 								<li class="list__item">Pets allowed</li>
 								<li class="list__item">We speak all languages</li>
 								<li class="list__item">Perfect for families</li>
+								<li class="list__item">Lorem ipsum dolor sit amet consectetur</li>
 							</ul>
+							<!-- @ recommenders -->
 							<div class="recommend">
 								<p class="recommend__count">
 									Lucy and 3 others friends recommend this hotel.
@@ -194,8 +215,9 @@
 								</div>
 							</div>
 						</div>
-
+						<!-- @ reviews -->
 						<div class="user-reviews">
+							<!-- @ 1st review -->
 							<figure class="review">
 								<blockquote class="review__text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta
@@ -203,12 +225,27 @@
 									ex.
 								</blockquote>
 								<figcaption class="review__user">
-									<img src="assets/img/user-1.jpg" alt="User 1" class="review__photo">
+									<img src="assets/img/user-ck.jpg" alt="User 1" class="review__photo">
 									<div class="review__user-box">
-										<p class="review__user-name">Nick Smith</p>
-										<p class="review__user-date">Feb 23rd, 2017</p>
+										<p class="review__user-name">CK Vargas</p>
+										<p class="review__user-date">November 22nd, 2022</p>
 									</div>
-									<div class="review__rating">7.8</div>
+									<div class="review__rating">9.2</div>
+								</figcaption>
+							</figure>
+							<!-- @ another review -->
+							<figure class="review">
+								<blockquote class="review__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta
+									animi.
+								</blockquote>
+								<figcaption class="review__user">
+									<img src="assets/img/user-ezra.jpg" alt="User 2" class="review__photo">
+									<div class="review__user-box">
+										<p class="review__user-name">Ezra Carorocan</p>
+										<p class="review__user-date">November 2nd, 2022</p>
+									</div>
+									<div class="review__rating">9.5</div>
 								</figcaption>
 							</figure>
 							<figure class="review">
@@ -217,19 +254,30 @@
 									animi.
 								</blockquote>
 								<figcaption class="review__user">
-									<img src="assets/img/user-2.jpg" alt="User 2" class="review__photo">
+									<img src="assets/img/user-caelum-candis.jpg" alt="User 2" class="review__photo">
 									<div class="review__user-box">
-										<p class="review__user-name">Mary Thomas</p>
-										<p class="review__user-date">Sept 13th, 2017</p>
+										<p class="review__user-name">Caelum &amp; Candis</p>
+										<p class="review__user-date">June 16th, 2023</p>
 									</div>
-									<div class="review__rating">9.3</div>
+									<div class="review__rating">10</div>
 								</figcaption>
 							</figure>
-							<button class="btn-inline">Show all <span>&rarr;</span></button>
+							<!-- @ Show all review button -->
+							<button type="button" class="btn-inline" id="show-all" aria-labelledby="show-all">Show all
+								<span>&rarr;</span></button>
 						</div>
-
 					</div>
-
+					<!-- @ Call to action book now button -->
+					<div class="cta">
+						<h2 class="cta__book-now">
+							Good news! We have 4 free rooms for your selected dates!
+						</h2>
+						<button type="button" class="btn" aria-labelledby="book-now">
+							<span class="btn__visible" id="book-now">Book now</span>
+							<!-- @ Remaining room -->
+							<span class="btn__invisible">Only 4 rooms left</span>
+						</button>
+					</div>
 				</main>
 			</div>
 		</div>

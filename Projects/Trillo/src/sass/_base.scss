@@ -1,3 +1,5 @@
+@import "mediaquery";
+
 :root {
 	--clr-primary: #eb2f64;
 	--clr-primary-light: #ff3366;
@@ -31,6 +33,10 @@
 
 html {
 	font-size: 62.5%; // 1rem = 10px 10px/16px = 63.5%
+
+	@include media(1100) {
+		font-size: 50%; // 8px
+	}
 }
 
 h1 {

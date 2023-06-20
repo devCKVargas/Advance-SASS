@@ -1,0 +1,47 @@
+@mixin media($breakpoint) {
+	//$ 600px
+	@if $breakpoint == 340 {
+		@media only screen and (max-width: 21.25em) {
+			@content;
+		}
+	}
+	@if $breakpoint == 370 {
+		@media only screen and (max-width: 23.125em) {
+			@content;
+		}
+	}
+	@if $breakpoint == 450 {
+		@media only screen and (max-width: 28.125em) {
+			@content;
+		}
+	}
+	@if $breakpoint == 600 {
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		}
+	}
+	//$ 900px
+	@if $breakpoint == 900 {
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		}
+	}
+	//$ 1100px
+	@if $breakpoint == 1100 {
+		@media only screen and (max-width: 68.75em) {
+			@content;
+		}
+	}
+	//$ 1200px
+	@if $breakpoint == 1200 {
+		@media only screen and (max-width: 75em) {
+			@content;
+		}
+	}
+	//$ 1800px
+	@if $breakpoint == 1800 {
+		@media only screen and (max-width: 112.5em) {
+			@content;
+		}
+	}
+}

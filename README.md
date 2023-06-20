@@ -10,9 +10,9 @@
 
 ## Code-along
 
-- [x] Natours
-- [ ] Nexter
-- [ ] Trello
+|Float layout|Flexbox| CSS Grid|
+|----------- |------ |---- |
+| ✔ Natours |✔ Trillo | Nexter|
 
 ## Basic Responsive Design Principles
 
@@ -20,15 +20,15 @@
 - [x] Flexible / Responsive images
 - [x] Media Queries
 
-## Build a website using the ff layouts
+## Maintainable & scalable code
 
-1. [ ] Float
-2. [ ] Flexbox
-3. [ ] CSS Grid
+- [x] 7-1 Pattern
 
-## Maintainable & scalable code: 7-1 Pattern
+## Built websites using
 
-- [x] 
+|Flexbox| CSS Grid|
+|------ |---- |
+| </>| </>|
 
 <!-- 🦶 Footer  -->
 <!-- created using: https://markdownlivepreview.com/ -->

@@ -11,8 +11,7 @@
 		<!--@ font -->
 		<link rel="preconnect" href="https://api.fonts.coollabs.io" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://api.fonts.coollabs.io
-/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+		<link href="https://api.fonts.coollabs.io/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
 
 		<!--@ favicon -->
 		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
@@ -25,7 +24,7 @@
 		<link rel="stylesheet" href="css/main.css" />
 
 		<!--@ js -->
-		<!-- <script defer src="/js/script.js"></script> -->
+		<script defer src="js/script.js"></script>
 
 		<!--@ title -->
 		<title>Trillo app using Flexbox</title>
@@ -48,23 +47,72 @@
 				</form>
 				<!-- @ User navigation -->
 				<nav class="user-nav" aria-label="Profile navigation">
-					<div class="user-nav__icon-box">
+					<div class="user-nav__icon-box" id="user-bookmark">
 						<svg class="user-nav__icon" role="img" aria-label="Bookmark">
 							<use xlink:href="assets/svg/sprite.svg#icon-bookmark"></use>
 						</svg>
 						<span class="user-nav__notification">7</span>
 					</div>
-					<div class="user-nav__icon-box">
+					<div class="user-nav__icon-box" id="user-chat">
 						<svg class="user-nav__icon" role="img" aria-label="Chat">
 							<use xlink:href="assets/svg/sprite.svg#icon-chat"></use>
 						</svg>
 						<span class="user-nav__notification">13</span>
 					</div>
-					<div class="user-nav__user">
+					<div class="user-nav__user" id="user-profile">
 						<img src="assets/img/user-ck.jpg" alt="User photo" class="user-nav__user-photo" />
 						<span class="user-nav__user-name">CK</span>
 					</div>
-
+					<!-- @ User profile -->
+					<!-- $ hidden -->
+					<div class="user-profile " aria-label="Accounts & Settings">
+						<div class="user-profile__accounts">
+							<div class="user-profile__user">
+								<img src="assets/img/user-ck.jpg" alt="User photo" class="user-profile__user-photo" />
+								<span class="user-profile__user-name">CK</span>
+							</div>
+							<div class="user-profile__all-profiles">
+								<h3 class="user-profile__heading">See all profiles</h3>
+							</div>
+						</div>
+						<div class="user-profile__settings">
+							<h3 class="user-profile__items">
+								<svg class="icon icon-cog">
+									<use xlink:href="assets/svg/sprite.svg#icon-cog"></use>
+								</svg>
+								Settings &amp; privacy <svg class="icon icon-more">
+									<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+								</svg>
+							</h3>
+							<h3 class="user-profile__items"><svg class="icon icon-help-with-circle">
+									<use xlink:href="assets/svg/sprite.svg#icon-help-with-circle"></use>
+								</svg>
+								Help &amp; support <svg class="icon icon-more">
+									<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+								</svg></h3>
+							<h3 class="user-profile__items"><svg class="icon icon-moon-fill">
+									<use xlink:href="assets/svg/sprite.svg#icon-moon-fill"></use>
+								</svg>
+								Display &amp; accessibility <svg class="icon icon-more">
+									<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+								</svg></h3>
+							<h3 class="user-profile__items"><svg class="icon icon-message">
+									<use xlink:href="assets/svg/sprite.svg#icon-message"></use>
+								</svg>
+								Give feedback</h3>
+							<h3 class="user-profile__items"><svg class="icon icon-exit">
+									<use xlink:href="assets/svg/sprite.svg#icon-exit"></use>
+								</svg>
+								Log out</h3>
+							<footer class="user-profile__footer">
+								<ul class="user-profile__footer__list">
+									<li class="user-profile__footer__list__item">Privacy</li>
+									<li class="user-profile__footer__list__item">Terms</li>
+									<li class="user-profile__footer__list__item">Trillo &copy; 2023</li>
+								</ul>
+							</footer>
+						</div>
+					</div>
 				</nav>
 			</header>
 			<!-- @ content -->
@@ -106,7 +154,7 @@
 						</li>
 					</ul>
 
-					<div class="legal">&copy; 2017 by trillo. All rights reserved.</div>
+					<div class="legal">&copy; 2023 by Trillo. All rights reserved.</div>
 
 				</nav>
 				<!-- @ main -->

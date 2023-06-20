@@ -1,24 +1,27 @@
 @import "mediaquery";
 
 :root {
-	--clr-primary: #eb2f64;
-	--clr-primary-light: #ff3366;
-	--clr-primary-dark: #ba265d;
+	--clr-primary: hsl(343, 85%, 55%);
+	--clr-primary-light: hsl(345, 100%, 60%);
+	--clr-primary-dark: hsl(340, 65%, 45%);
 
-	--clr-gray-light-1: #faf9f9;
-	--clr-gray-light-2: #f4f2f2;
-	--clr-gray-light-3: #f0eeee;
-	--clr-gray-light-4: #ccc;
+	--clr-gray-light-1: hsl(0, 10%, 99%);
+	--clr-gray-light-2: hsl(0, 8%, 95%);
+	--clr-gray-light-3: hsl(0, 6%, 92%);
+	--clr-gray-light-4: hsl(0, 0%, 80%);
 
-	--clr-gray-dark-1: #333;
-	--clr-gray-dark-2: #777;
-	--clr-gray-dark-3: #999;
+	--clr-gray-dark-1: hsl(0, 0%, 20%);
+	--clr-gray-dark-1-1: hsl(0, 0%, 28%);
+	--clr-gray-dark-2: hsl(0, 0%, 30%);
+	--clr-gray-dark-3: hsl(0, 0%, 35%);
+	--clr-gray-dark-4: hsl(0, 0%, 60%);
 
 	--clr-white: #fff;
 	--clr-black: #000;
 
 	--shadow-clr-1: rgba(0, 0, 0, 0.3);
 	--shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+	--account-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 	--shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 	--line: 1px solid var(--clr-gray-light-2);
 }
@@ -33,6 +36,9 @@
 
 html {
 	font-size: 62.5%; // 1rem = 10px 10px/16px = 63.5%
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
 
 	@include media(1100) {
 		font-size: 50%; // 8px
@@ -44,9 +50,6 @@ h1 {
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	font-weight: 400;
-	line-height: 1.6;
 	color: var(--clr-gray-dark-2);
 	background: no-repeat center/cover
 		linear-gradient(to right bottom, var(--clr-primary-light), var(--clr-primary-dark));

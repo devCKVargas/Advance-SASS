@@ -1,6 +1,0 @@
-@mixin media($breakpoint) {
-	//$ calculate breakpoint: @include media(600em) / 16 = 37.5em;
-	@media only screen and (max-width: calc($breakpoint / 16)) {
-		@content;
-	}
-}

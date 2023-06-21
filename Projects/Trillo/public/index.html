@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!--@ meta tags -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Chris King Vargas" />
+		<meta name="description" content="Trillo app using Flexbox" />
+
+		<!--@ font -->
+		<link rel="preconnect" href="https://api.fonts.coollabs.io" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://api.fonts.coollabs.io/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+		<!--@ favicon -->
+		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+
+		<!--@ CSS -->
+		<!--@ normalized -->
+		<link rel="stylesheet" href="css/normalized.css" />
+
+		<!--@ style -->
+		<link rel="stylesheet" href="css/main.css" />
+
+		<!--@ js -->
+		<script defer src="js/script.js"></script>
+
+		<!--@ title -->
+		<title>Trillo app using Flexbox</title>
+	</head>
+
+	<body>
+		<!--@ header -->
+		<div class="wrapper">
+			<header class="header">
+				<a href="#">
+					<img src="assets/img/logo.png" alt="trillio logo" class="logo" />
+				</a>
+				<!-- @ Search input -->
+				<form action="#" class="search">
+					<input type="text" class="search__input" placeholder="Search hotels" aria-label="Search hotels" />
+					<button class="search__button" aria-label="Search button">
+						<!--$ use svg from sprite.svg (only for live servers) -->
+						<svg class="search__icon">
+							<use xlink:href="assets/svg/sprite.svg#icon-magnifying-glass"></use>
+						</svg>
+					</button>
+				</form>
+				<!-- @ User navigation -->
+				<nav class="user-nav" aria-label="Profile navigation">
+					<a href="#" id="user-bookmark">
+						<div class="user-nav__icon-box">
+							<svg class="user-nav__icon" role="img" aria-label="Bookmark">
+								<use xlink:href="assets/svg/sprite.svg#icon-bookmark"></use>
+							</svg>
+							<span class="user-nav__notification">7</span>
+						</div>
+					</a>
+					<a href="#" id="user-chat">
+						<div class="user-nav__icon-box">
+							<svg class="user-nav__icon" role="img" aria-label="Chat">
+								<use xlink:href="assets/svg/sprite.svg#icon-chat"></use>
+							</svg>
+							<span class="user-nav__notification">13</span>
+						</div>
+					</a>
+					<a href="#" id="user-profile">
+						<div class="user-nav__user">
+							<img src="assets/img/user-ck.jpg" alt="User photo" class="user-nav__user-photo" />
+							<span class="user-nav__user-name">CK</span>
+						</div>
+					</a>
+					<!-- @ User profile -->
+					<!-- $ hidden -->
+					<div class="your-profile" aria-label="Your profile">
+						<div class="your-profile__accounts">
+							<a href="#">
+								<div class="your-profile__user">
+									<img src="assets/img/user-ck.jpg" alt="User photo" class="your-profile__user-photo" />
+									<h1 class="your-profile__user-name">CK</h1>
+								</div>
+							</a>
+							<hr>
+							<a href="#">
+								<div class="your-profile__all-profiles">
+									<h2 class="your-profile__heading">See all profiles</h2>
+								</div>
+							</a>
+						</div>
+						<div class="your-profile__settings">
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-cog">
+										<use xlink:href="assets/svg/sprite.svg#icon-cog"></use>
+									</svg>
+									Settings &amp; privacy
+									<svg class="icon icon-more">
+										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+									</svg>
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-help-with-circle">
+										<use xlink:href="assets/svg/sprite.svg#icon-help-with-circle"></use>
+									</svg>
+									Help &amp; support
+									<svg class="icon icon-more">
+										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+									</svg>
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-moon-fill">
+										<use xlink:href="assets/svg/sprite.svg#icon-moon-fill"></use>
+									</svg>
+									Display &amp; accessibility
+									<svg class="icon icon-more">
+										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+									</svg>
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-message">
+										<use xlink:href="assets/svg/sprite.svg#icon-message">
+										</use>
+									</svg>
+									Give feedback
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-exit">
+										<use xlink:href="assets/svg/sprite.svg#icon-exit">
+										</use>
+									</svg>
+									Log out
+								</h2>
+							</a>
+							<footer class="your-profile__footer" aria-label="Your profile footer navigation">
+								<div class="your-profile__footer__container">
+									<ul class="your-profile__footer__list">
+										<li class="your-profile__footer__list__item">
+											<a href="#">Privacy</a>
+										</li>
+										<li class="your-profile__footer__list__item">
+											<a href="#">Terms</a>
+										</li>
+										<li class="your-profile__footer__list__item">
+											Trillo &copy; <span class="current-year">2077</span>
+										</li>
+									</ul>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<!-- @ content -->
+			<div class="content">
+				<!-- @ sidebar -->
+				<nav class="sidebar" aria-label="Navigation">
+					<ul class="side-nav">
+						<li class="side-nav__item side-nav__item--active">
+							<a href="#" class="side-nav__link">
+								<svg class="side-nav__icon" aria-labelledby="hotel">
+									<use xlink:href="assets/svg/sprite.svg#icon-home"></use>
+								</svg>
+								<span id="hotel">Hotel</span>
+							</a>
+						</li>
+						<li class="side-nav__item">
+							<a href="#" class="side-nav__link">
+								<svg class="side-nav__icon" aria-labelledby="flight">
+									<use xlink:href="assets/svg/sprite.svg#icon-aircraft-take-off"></use>
+								</svg>
+								<span id="flight">Flight</span>
+							</a>
+						</li>
+						<li class="side-nav__item">
+							<a href="#" class="side-nav__link">
+								<svg class="side-nav__icon" aria-labelledby="car-rental">
+									<use xlink:href="assets/svg/sprite.svg#icon-key"></use>
+								</svg>
+								<span id="car-rental">Car rental</span>
+							</a>
+						</li>
+						<li class="side-nav__item">
+							<a href="#" class="side-nav__link">
+								<svg class="side-nav__icon" aria-labelledby="tours">
+									<use xlink:href="assets/svg/sprite.svg#icon-map"></use>
+								</svg>
+								<span id="tours">Tours</span>
+							</a>
+						</li>
+					</ul>
+
+					<div class="legal">&copy; <span class="current-year">2017</span> by Trillo. All rights reserved.</div>
+
+				</nav>
+				<!-- @ main -->
+				<main class="hotel-view">
+					<!-- @ gallery -->
+					<div class="gallery">
+						<figure class="gallery__item">
+							<a href="#"><img src="assets/img/hotel-1.jpg" alt="Front photo of Okada Manila Resort & Casino" class="gallery__photo"></a>
+						</figure>
+						<figure class="gallery__item">
+							<a href="#"><img src="assets/img/hotel-4.jpg" alt="Photo of hotel 4" class="gallery__photo"></a>
+						</figure>
+						<figure class="gallery__item">
+							<a href="#"><img src="assets/img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo"></a>
+						</figure>
+						<figure class="gallery__item">
+							<a href="#"><img src="assets/img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo"></a>
+						</figure>
+					</div>
+					<!-- @ hotel overview -->
+					<div class="overview">
+						<h1 class="overview__heading">Okada Manila</h1>
+						<div class="overview__stars">
+							<svg class="overview__icon-star" aria-hidden="true">
+								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star" aria-hidden="true">
+								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star" aria-hidden="true">
+								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star" aria-hidden="true">
+								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star" aria-hidden="true">
+								<use xlink:href="assets/svg/sprite.svg#icon-star"></use>
+							</svg>
+						</div>
+						<!-- @ hotel location -->
+						<div class="overview__location">
+							<svg class="overview__icon-location" aria-labelledby="location">
+								<use xlink:href="assets/svg/sprite.svg#icon-location-pin"></use>
+							</svg>
+							<a href="https://goo.gl/maps/uRPVJycng1t5kBnN8" target="_blank" class="btn-inline" id="location">Manila, Philippines</a>
+						</div>
+						<!-- @ hotel rating -->
+						<div class="overview__rating">
+							<div class="overview__rating-average">9.1</div>
+							<div class="overview__rating-count">2,714 votes</div>
+						</div>
+					</div>
+					<!-- @ details -->
+					<div class="detail">
+						<!-- @ description -->
+						<div class="description">
+							<p class="paragraph">
+								Okada Manila is a 5-star city resort in the entertainment district of Manila, overlooking the scenic Manila Bay.
+							</p>
+							<p class="paragraph">
+								The resort features a casino, a spa, an outdoor pool, and a dancing fountain that rivals the ones in Las Vegas and Dubai.
+							</p>
+							<p class="paragraph">
+								Guests can choose from over 21 dining options, including Michelin-starred chefs' creations, Asian cuisines, and casual eateries
+							</p>
+							<p class="paragraph">
+								The rooms are spacious and luxurious, with amenities like linen service, blackout curtains, and in-room video streaming
+							</p>
+							<p class="paragraph">
+								The resort is close to popular attractions like SM Mall of Asia, SMX Convention Center, and Star City Amusement Park
+							</p>
+							<p class="paragraph">
+								Okada Manila is a grand icon of Manila, offering a one-of-a-kind experience of pleasure and leisure
+							</p>
+							<!-- @ descriptive list -->
+							<ul class="list">
+								<li class="list__item">Astonishing views</li>
+								<li class="list__item">Breakfast included</li>
+								<li class="list__item">Free airport shuttle</li>
+								<li class="list__item">Free wifi in all rooms</li>
+								<li class="list__item">Air conditioning and heating</li>
+								<li class="list__item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+								<li class="list__item">Pets allowed</li>
+								<li class="list__item">We speak all languages</li>
+								<li class="list__item">Perfect for families</li>
+								<li class="list__item">Lorem ipsum dolor sit amet consectetur</li>
+							</ul>
+							<!-- @ recommenders -->
+							<div class="recommend">
+								<p class="recommend__count">
+									Lucy and 3 others friends recommend this hotel.
+								</p>
+								<div class="recommend__friends">
+									<img src="assets/img/user-3.jpg" alt="Friend 1" class="recommend__photo">
+									<img src="assets/img/user-4.jpg" alt="Friend 2" class="recommend__photo">
+									<img src="assets/img/user-5.jpg" alt="Friend 3" class="recommend__photo">
+									<img src="assets/img/user-6.jpg" alt="Friend 4" class="recommend__photo">
+								</div>
+							</div>
+						</div>
+						<!-- @ reviews -->
+						<div class="user-reviews">
+							<!-- @ 1st review -->
+							<figure class="review">
+								<blockquote class="review__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
+								</blockquote>
+								<figcaption class="review__user">
+									<img src="assets/img/user-ck.jpg" alt="User 1" class="review__photo">
+									<div class="review__user-box">
+										<p class="review__user-name">CK Vargas</p>
+										<p class="review__user-date">November 22nd, 2022</p>
+									</div>
+									<div class="review__rating">9.2</div>
+								</figcaption>
+							</figure>
+							<!-- @ another review -->
+							<figure class="review">
+								<blockquote class="review__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+								</blockquote>
+								<figcaption class="review__user">
+									<img src="assets/img/user-ezra.jpg" alt="User 2" class="review__photo">
+									<div class="review__user-box">
+										<p class="review__user-name">Ezra Carorocan</p>
+										<p class="review__user-date">November 2nd, 2022</p>
+									</div>
+									<div class="review__rating">9.5</div>
+								</figcaption>
+							</figure>
+							<figure class="review">
+								<blockquote class="review__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+								</blockquote>
+								<figcaption class="review__user">
+									<img src="assets/img/user-caelum-candis.jpg" alt="User 2" class="review__photo">
+									<div class="review__user-box">
+										<p class="review__user-name">Caelum &amp; Candis</p>
+										<p class="review__user-date">June 16th, 2023</p>
+									</div>
+									<div class="review__rating">10</div>
+								</figcaption>
+							</figure>
+							<!-- @ Show all review button -->
+							<a href="#" class="btn-inline" id="show-all" aria-labelledby="show-all">Show all
+								<span>&rarr;</span>
+							</a>
+						</div>
+					</div>
+					<!-- @ Call to action book now button -->
+					<div class="cta">
+						<h2 class="cta__book-now">
+							Good news! We have 4 free rooms for your selected dates!
+						</h2>
+						<a href="#" type="button" class="btn" aria-labelledby="book-now">
+							<span class="btn__visible" id="book-now">Book now</span>
+							<!-- @ Remaining room -->
+							<span class="btn__invisible">Only 4 rooms left</span>
+						</a>
+					</div>
+				</main>
+			</div>
+		</div>
+	</body>
+
+</html>

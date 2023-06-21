@@ -19,7 +19,7 @@
 	justify-content: center;
 	position: relative;
 
-	@include media(600) {
+	@include media(600em) {
 		order: 1;
 		flex: 0 0 100%;
 	}
@@ -36,15 +36,11 @@
 		transition: all 0.2s;
 		margin-right: -3.25rem;
 
-		@include media(450) {
-			// margin-right: 0;
-		}
-
 		&:focus {
 			width: 100%;
 			background-color: var(--clr-gray-light-3);
 
-			@include media(450) {
+			@include media(450em) {
 				margin-right: 0;
 
 				+ .search__button {
@@ -145,7 +141,12 @@
 .user-profile {
 	position: absolute;
 	z-index: 2;
-	top: 110%;
+	top: 95%;
+
+	@include media(600em) {
+		top: 115%;
+	}
+
 	right: 2rem;
 	height: auto;
 	color: var(--clr-white);
@@ -158,6 +159,7 @@
 	padding: 0;
 	border-radius: 5px;
 	flex-direction: column;
+	gap: 1rem;
 
 	//$ test
 	// min-height: 30rem;
@@ -230,7 +232,6 @@
 	}
 
 	&__settings {
-		margin-top: 2rem;
 		align-items: flex-start;
 	}
 
@@ -272,7 +273,7 @@
 	}
 
 	&__footer {
-		padding: 0.05rem 1rem 1.05rem 1rem;
+		padding: 1.05rem 1rem;
 		&__list {
 			list-style: none;
 			display: flex;
@@ -307,7 +308,7 @@
 	list-style: none;
 	margin-top: 3.5rem;
 
-	@include media(900) {
+	@include media(900em) {
 		margin-top: 0;
 		display: flex;
 	}
@@ -315,14 +316,14 @@
 	&__item {
 		position: relative;
 
-		@include media(900) {
+		@include media(900em) {
 			flex: 1;
 		}
 
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
 
-			@include media(900) {
+			@include media(900em) {
 				margin-bottom: 0;
 			}
 		}
@@ -364,12 +365,12 @@
 
 		display: flex;
 
-		@include media(900) {
+		@include media(900em) {
 			justify-content: center;
 			padding: 2rem;
 		}
 
-		@include media(600) {
+		@include media(600em) {
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
@@ -383,7 +384,7 @@
 		margin-right: 2rem;
 		fill: currentColor;
 
-		@include media(600) {
+		@include media(600em) {
 			margin-right: 0;
 			margin-bottom: 0.7rem;
 			width: 1.5rem;
@@ -401,7 +402,7 @@
 	text-align: center;
 	padding: 2.5rem;
 
-	@include media(900) {
+	@include media(900em) {
 		display: none;
 	}
 }
@@ -429,13 +430,13 @@
 	align-items: center;
 	border-bottom: var(--line);
 
-	@include media(450) {
+	@include media(450em) {
 		// gap: 1rem;
 		flex-wrap: wrap;
 		padding: 0 3rem;
 	}
 
-	@include media(340) {
+	@include media(340em) {
 		gap: 2rem;
 	}
 
@@ -447,19 +448,19 @@
 		letter-spacing: 1px;
 		padding: 1.5rem 3rem;
 
-		@include media(600) {
+		@include media(600em) {
 			font-size: 1.8rem;
 			font-size: 1.8rem;
 			padding: 1.25rem 2rem;
 		}
 
-		@include media(450) {
+		@include media(450em) {
 			padding: 1.25rem 0;
 			flex: 0 0 50%;
 			text-align: center;
 		}
 
-		@include media(340) {
+		@include media(340em) {
 			font-size: 2rem;
 			flex: 100%;
 			margin-bottom: -2rem;
@@ -470,13 +471,13 @@
 		margin-right: auto;
 		display: flex;
 
-		@include media(450) {
+		@include media(450em) {
 			flex: 0 0 50%;
 			// margin-inline: auto;
 			justify-content: center;
 		}
 
-		@include media(340) {
+		@include media(340em) {
 			flex: 100%;
 			order: 1;
 		}
@@ -496,12 +497,12 @@
 		display: flex;
 		align-items: center;
 
-		@include media(450) {
+		@include media(450em) {
 			flex: 0 0 50%;
 			justify-content: center;
 		}
 
-		@include media(340) {
+		@include media(340em) {
 			flex: 100%;
 			order: 0;
 		}
@@ -523,18 +524,18 @@
 		align-items: center;
 		padding: 0 2.25rem;
 
-		@include media(600) {
+		@include media(600em) {
 			padding: 0 1.5rem;
 		}
 
-		@include media(450) {
+		@include media(450em) {
 			flex: 1;
 			margin-inline: 3.5rem;
 			padding-block: 1rem;
 			justify-content: center;
 		}
 
-		@include media(340) {
+		@include media(340em) {
 			flex: 100%;
 			max-width: 13rem;
 			margin-inline: auto;
@@ -546,10 +547,10 @@
 		font-size: 2.25rem;
 		margin-bottom: -3px;
 
-		@include media(600) {
+		@include media(600em) {
 			font-size: 1.5rem;
 		}
-		@include media(370) {
+		@include media(370em) {
 			margin-bottom: 0;
 		}
 	}
@@ -567,7 +568,7 @@
 	padding: 3.5rem 0;
 	text-align: center;
 
-	@include media(900) {
+	@include media(900em) {
 		padding: 2.5rem 0;
 	}
 
@@ -741,7 +742,7 @@
 		//$ test
 		align-self: center;
 
-		@include media(370) {
+		@include media(370em) {
 			flex: 0 0 100%;
 		}
 	}
@@ -756,7 +757,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	@include media(370) {
+	@include media(370em) {
 		flex-direction: column-reverse;
 		gap: 1.5rem;
 	}
@@ -767,7 +768,7 @@
 	}
 
 	&:hover &__count {
-		@include media(370) {
+		@include media(370em) {
 			margin-right: 0;
 		}
 	}
@@ -801,7 +802,7 @@
 		&:not(:last-child) {
 			margin-right: -2rem;
 
-			@include media(370) {
+			@include media(370em) {
 				margin-right: 0;
 			}
 		}
@@ -820,7 +821,7 @@
 	z-index: 1;
 	overflow: hidden;
 
-	@include media(900) {
+	@include media(900em) {
 		padding: 2rem;
 		margin-bottom: 3rem;
 	}

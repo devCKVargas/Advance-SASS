@@ -7,7 +7,7 @@
 	// test
 	min-height: 50rem;
 
-	@include media(1200) {
+	@include media(1200em) {
 		margin: 0;
 		max-width: 100%;
 	}
@@ -23,7 +23,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	@include media(600) {
+	@include media(600em) {
 		flex-wrap: wrap;
 		align-content: space-evenly;
 		height: 11rem;
@@ -33,7 +33,7 @@
 .content {
 	display: flex;
 
-	@include media(900) {
+	@include media(900em) {
 		flex-direction: column;
 	}
 }
@@ -60,11 +60,11 @@
 	background-color: var(--clr-gray-light-1);
 	border-bottom: var(--line);
 
-	@include media(900) {
+	@include media(900em) {
 		padding: 3rem;
 	}
 
-	@include media(600) {
+	@include media(600em) {
 		flex-direction: column;
 	}
 }
@@ -76,12 +76,12 @@
 	flex: 0 0 60%;
 	margin-right: 4.5rem;
 
-	@include media(900) {
+	@include media(900em) {
 		padding: 2rem;
 		margin-right: 3rem;
 	}
 
-	@include media(600) {
+	@include media(600em) {
 		margin-right: 0;
 		margin-bottom: 3rem;
 	}

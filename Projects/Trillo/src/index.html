@@ -34,11 +34,13 @@
 		<!--@ header -->
 		<div class="wrapper">
 			<header class="header">
-				<img src="assets/img/logo.png" alt="trillio logo" class="logo" />
+				<a href="#">
+					<img src="assets/img/logo.png" alt="trillio logo" class="logo" />
+				</a>
 				<!-- @ Search input -->
 				<form action="#" class="search">
 					<input type="text" class="search__input" placeholder="Search hotels" aria-label="Search hotels" />
-					<button type="button" class="search__button" aria-label="Search button">
+					<button class="search__button" aria-label="Search button">
 						<!--$ use svg from sprite.svg (only for live servers) -->
 						<svg class="search__icon">
 							<use xlink:href="assets/svg/sprite.svg#icon-magnifying-glass"></use>
@@ -47,69 +49,111 @@
 				</form>
 				<!-- @ User navigation -->
 				<nav class="user-nav" aria-label="Profile navigation">
-					<div class="user-nav__icon-box" id="user-bookmark">
-						<svg class="user-nav__icon" role="img" aria-label="Bookmark">
-							<use xlink:href="assets/svg/sprite.svg#icon-bookmark"></use>
-						</svg>
-						<span class="user-nav__notification">7</span>
-					</div>
-					<div class="user-nav__icon-box" id="user-chat">
-						<svg class="user-nav__icon" role="img" aria-label="Chat">
-							<use xlink:href="assets/svg/sprite.svg#icon-chat"></use>
-						</svg>
-						<span class="user-nav__notification">13</span>
-					</div>
-					<div class="user-nav__user" id="user-profile">
-						<img src="assets/img/user-ck.jpg" alt="User photo" class="user-nav__user-photo" />
-						<span class="user-nav__user-name">CK</span>
-					</div>
+					<a href="#" id="user-bookmark">
+						<div class="user-nav__icon-box">
+							<svg class="user-nav__icon" role="img" aria-label="Bookmark">
+								<use xlink:href="assets/svg/sprite.svg#icon-bookmark"></use>
+							</svg>
+							<span class="user-nav__notification">7</span>
+						</div>
+					</a>
+					<a href="#" id="user-chat">
+						<div class="user-nav__icon-box">
+							<svg class="user-nav__icon" role="img" aria-label="Chat">
+								<use xlink:href="assets/svg/sprite.svg#icon-chat"></use>
+							</svg>
+							<span class="user-nav__notification">13</span>
+						</div>
+					</a>
+					<a href="#" id="user-profile">
+						<div class="user-nav__user">
+							<img src="assets/img/user-ck.jpg" alt="User photo" class="user-nav__user-photo" />
+							<span class="user-nav__user-name">CK</span>
+						</div>
+					</a>
 					<!-- @ User profile -->
 					<!-- $ hidden -->
-					<div class="user-profile " aria-label="Accounts & Settings">
-						<div class="user-profile__accounts">
-							<div class="user-profile__user">
-								<img src="assets/img/user-ck.jpg" alt="User photo" class="user-profile__user-photo" />
-								<span class="user-profile__user-name">CK</span>
-							</div>
-							<div class="user-profile__all-profiles">
-								<h3 class="user-profile__heading">See all profiles</h3>
-							</div>
+					<div class="your-profile" aria-label="Your profile">
+						<div class="your-profile__accounts">
+							<a href="#">
+								<div class="your-profile__user">
+									<img src="assets/img/user-ck.jpg" alt="User photo" class="your-profile__user-photo" />
+									<h1 class="your-profile__user-name">CK</h1>
+								</div>
+							</a>
+							<hr>
+							<a href="#">
+								<div class="your-profile__all-profiles">
+									<h2 class="your-profile__heading">See all profiles</h2>
+								</div>
+							</a>
 						</div>
-						<div class="user-profile__settings">
-							<h3 class="user-profile__items">
-								<svg class="icon icon-cog">
-									<use xlink:href="assets/svg/sprite.svg#icon-cog"></use>
-								</svg>
-								Settings &amp; privacy <svg class="icon icon-more">
-									<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
-								</svg>
-							</h3>
-							<h3 class="user-profile__items"><svg class="icon icon-help-with-circle">
-									<use xlink:href="assets/svg/sprite.svg#icon-help-with-circle"></use>
-								</svg>
-								Help &amp; support <svg class="icon icon-more">
-									<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
-								</svg></h3>
-							<h3 class="user-profile__items"><svg class="icon icon-moon-fill">
-									<use xlink:href="assets/svg/sprite.svg#icon-moon-fill"></use>
-								</svg>
-								Display &amp; accessibility <svg class="icon icon-more">
-									<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
-								</svg></h3>
-							<h3 class="user-profile__items"><svg class="icon icon-message">
-									<use xlink:href="assets/svg/sprite.svg#icon-message"></use>
-								</svg>
-								Give feedback</h3>
-							<h3 class="user-profile__items"><svg class="icon icon-exit">
-									<use xlink:href="assets/svg/sprite.svg#icon-exit"></use>
-								</svg>
-								Log out</h3>
-							<footer class="user-profile__footer">
-								<ul class="user-profile__footer__list">
-									<li class="user-profile__footer__list__item">Privacy</li>
-									<li class="user-profile__footer__list__item">Terms</li>
-									<li class="user-profile__footer__list__item">Trillo &copy; 2023</li>
-								</ul>
+						<div class="your-profile__settings">
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-cog">
+										<use xlink:href="assets/svg/sprite.svg#icon-cog"></use>
+									</svg>
+									Settings &amp; privacy
+									<svg class="icon icon-more">
+										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+									</svg>
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-help-with-circle">
+										<use xlink:href="assets/svg/sprite.svg#icon-help-with-circle"></use>
+									</svg>
+									Help &amp; support
+									<svg class="icon icon-more">
+										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+									</svg>
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-moon-fill">
+										<use xlink:href="assets/svg/sprite.svg#icon-moon-fill"></use>
+									</svg>
+									Display &amp; accessibility
+									<svg class="icon icon-more">
+										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+									</svg>
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-message">
+										<use xlink:href="assets/svg/sprite.svg#icon-message">
+										</use>
+									</svg>
+									Give feedback
+								</h2>
+							</a>
+							<a href="#">
+								<h2 class="your-profile__items">
+									<svg class="icon icon-exit">
+										<use xlink:href="assets/svg/sprite.svg#icon-exit">
+										</use>
+									</svg>
+									Log out
+								</h2>
+							</a>
+							<footer class="your-profile__footer" aria-label="Your profile footer navigation">
+								<div class="your-profile__footer__container">
+									<ul class="your-profile__footer__list">
+										<li class="your-profile__footer__list__item">
+											<a href="#">Privacy</a>
+										</li>
+										<li class="your-profile__footer__list__item">
+											<a href="#">Terms</a>
+										</li>
+										<li class="your-profile__footer__list__item">
+											Trillo &copy; <span class="current-year">2077</span>
+										</li>
+									</ul>
+								</div>
 							</footer>
 						</div>
 					</div>
@@ -154,7 +198,7 @@
 						</li>
 					</ul>
 
-					<div class="legal">&copy; 2023 by Trillo. All rights reserved.</div>
+					<div class="legal">&copy; <span class="current-year">2017</span> by Trillo. All rights reserved.</div>
 
 				</nav>
 				<!-- @ main -->
@@ -162,8 +206,7 @@
 					<!-- @ gallery -->
 					<div class="gallery">
 						<figure class="gallery__item">
-							<a href="#"><img src="assets/img/hotel-1.jpg" alt="Front photo of Okada Manila Resort & Casino"
-									  class="gallery__photo"></a>
+							<a href="#"><img src="assets/img/hotel-1.jpg" alt="Front photo of Okada Manila Resort & Casino" class="gallery__photo"></a>
 						</figure>
 						<figure class="gallery__item">
 							<a href="#"><img src="assets/img/hotel-4.jpg" alt="Photo of hotel 4" class="gallery__photo"></a>
@@ -200,7 +243,7 @@
 							<svg class="overview__icon-location" aria-labelledby="location">
 								<use xlink:href="assets/svg/sprite.svg#icon-location-pin"></use>
 							</svg>
-							<button type="button" class="btn-inline" id="location">Manila, Philippines</button>
+							<a href="https://goo.gl/maps/uRPVJycng1t5kBnN8" target="_blank" class="btn-inline" id="location">Manila, Philippines</a>
 						</div>
 						<!-- @ hotel rating -->
 						<div class="overview__rating">
@@ -213,29 +256,22 @@
 						<!-- @ description -->
 						<div class="description">
 							<p class="paragraph">
-								Okada Manila is a 5-star city resort in the entertainment district of Manila, overlooking the
-								scenic Manila Bay.
+								Okada Manila is a 5-star city resort in the entertainment district of Manila, overlooking the scenic Manila Bay.
 							</p>
 							<p class="paragraph">
-								The resort features a casino, a spa, an outdoor pool, and a dancing fountain that rivals the
-								ones in Las Vegas and Dubai.
+								The resort features a casino, a spa, an outdoor pool, and a dancing fountain that rivals the ones in Las Vegas and Dubai.
 							</p>
 							<p class="paragraph">
-								Guests can choose from over 21 dining options, including Michelin-starred chefs' creations,
-								Asian cuisines, and casual
-								eateries
+								Guests can choose from over 21 dining options, including Michelin-starred chefs' creations, Asian cuisines, and casual eateries
 							</p>
 							<p class="paragraph">
-								The rooms are spacious and luxurious, with amenities like linen service, blackout curtains, and
-								in-room video streaming
+								The rooms are spacious and luxurious, with amenities like linen service, blackout curtains, and in-room video streaming
 							</p>
 							<p class="paragraph">
-								The resort is close to popular attractions like SM Mall of Asia, SMX Convention Center, and Star
-								City Amusement Park
+								The resort is close to popular attractions like SM Mall of Asia, SMX Convention Center, and Star City Amusement Park
 							</p>
 							<p class="paragraph">
-								Okada Manila is a grand icon of Manila, offering a one-of-a-kind experience of pleasure and
-								leisure
+								Okada Manila is a grand icon of Manila, offering a one-of-a-kind experience of pleasure and leisure
 							</p>
 							<!-- @ descriptive list -->
 							<ul class="list">
@@ -268,9 +304,7 @@
 							<!-- @ 1st review -->
 							<figure class="review">
 								<blockquote class="review__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta
-									animi, totam, itaque officia
-									ex.
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
 								</blockquote>
 								<figcaption class="review__user">
 									<img src="assets/img/user-ck.jpg" alt="User 1" class="review__photo">
@@ -284,8 +318,7 @@
 							<!-- @ another review -->
 							<figure class="review">
 								<blockquote class="review__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta
-									animi.
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
 								</blockquote>
 								<figcaption class="review__user">
 									<img src="assets/img/user-ezra.jpg" alt="User 2" class="review__photo">
@@ -298,8 +331,7 @@
 							</figure>
 							<figure class="review">
 								<blockquote class="review__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta
-									animi.
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
 								</blockquote>
 								<figcaption class="review__user">
 									<img src="assets/img/user-caelum-candis.jpg" alt="User 2" class="review__photo">
@@ -311,8 +343,9 @@
 								</figcaption>
 							</figure>
 							<!-- @ Show all review button -->
-							<button type="button" class="btn-inline" id="show-all" aria-labelledby="show-all">Show all
-								<span>&rarr;</span></button>
+							<a href="#" class="btn-inline" id="show-all" aria-labelledby="show-all">Show all
+								<span>&rarr;</span>
+							</a>
 						</div>
 					</div>
 					<!-- @ Call to action book now button -->
@@ -320,11 +353,11 @@
 						<h2 class="cta__book-now">
 							Good news! We have 4 free rooms for your selected dates!
 						</h2>
-						<button type="button" class="btn" aria-labelledby="book-now">
+						<a href="#" type="button" class="btn" aria-labelledby="book-now">
 							<span class="btn__visible" id="book-now">Book now</span>
 							<!-- @ Remaining room -->
 							<span class="btn__invisible">Only 4 rooms left</span>
-						</button>
+						</a>
 					</div>
 				</main>
 			</div>

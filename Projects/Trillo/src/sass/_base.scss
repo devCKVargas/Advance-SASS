@@ -34,6 +34,15 @@
 	box-sizing: border-box;
 }
 
+::-moz-selection {
+	background-color: var(--clr-primary);
+}
+
+::selection {
+	background-color: var(--clr-primary);
+	color: var(--clr-white);
+}
+
 html {
 	font-size: 62.5%; // 1rem = 10px 10px/16px = 63.5%
 	font-family: "Open Sans", sans-serif;
@@ -49,10 +58,13 @@ h1 {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 body {
 	color: var(--clr-gray-dark-2);
-	background: no-repeat center/cover
-		linear-gradient(to right bottom, var(--clr-primary-light), var(--clr-primary-dark));
+	background: no-repeat center/cover linear-gradient(to right bottom, var(--clr-primary-light), var(--clr-primary-dark));
 
 	// test
 	min-height: 100vh;

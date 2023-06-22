@@ -27,8 +27,15 @@
 	}
 
 	a:link,
-	a:visited {
+	a:visited,
+	button {
 		color: inherit;
+	}
+
+
+
+	& > * {
+		display: flex;
 	}
 
 	& > *:hover {
@@ -41,7 +48,7 @@
 	}
 
 	&__controls {
-		display: flex;
+
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
@@ -49,7 +56,7 @@
 	}
 
 	&__controls-heading {
-		font-size: 1.4em;
+		font-size: 1.7rem;
 	}
 
 	&__controls-icon-box {
@@ -76,18 +83,100 @@
 		}
 	}
 
-	&__chats {}
+	//////////////////////////////////////////////////////
+	//$ User chats
+	&__chats {
+		flex-direction: column;
 
-	&__content-box {
-		display: flex;
-		align-items: center;
-		gap: .7rem;
-		padding: .75rem;
-		border-radius: 3px;
-		cursor: pointer;
+		&__chat-box {
+			display: flex;
+			align-items: center;
+			gap: .7rem;
+			padding: .75rem;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 1.6rem;
 
-		&:hover {
-			background-color: var(--clr-gray-dark-3);
+			&:hover {
+				background-color: var(--clr-gray-dark-3);
+			}
+
+			&:active {
+				background-color: var(--clr-gray-dark-2);
+			}
+		}
+
+		&__content {
+			text-align: left;
+		}
+
+		&__profile-photo img {
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%;
+			-o-object-fit: cover;
+			object-fit: cover;
+			-o-object-position: center 65%;
+			object-position: center 65%;
+			display: flex;
+		}
+
+
+		&__user-name {}
+
+		&__preview,
+		&__sent-time {
+			font-weight: 300;
+		}
+
+		&__preview {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width: 27ch;
+			//$ test
+			// text-decoration: underline;
+		}
+
+		&__sent-time {
+			display: flex;
+			align-self: flex-end;
+			line-height: 2;
+			font-size: .9em;
+
+			//$ test
+			// text-decoration: underline;
+
+			&::before {
+				content: "•";
+				margin-right: .3rem;
+				margin-left: -.4rem;
+			}
+		}
+	}
+
+	.user-messages__show-all {
+		width: calc(100% + (var(--padding) * 2));
+
+		justify-content: center;
+		border-top: 1px solid var(--clr-gray-dark-3);
+		background-color: var(--clr-gray-dark-1);
+		padding: var(--padding);
+		border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+		.user-messages__show-all--link {
+			display: inline-block;
+			color: var(--clr-primary-light);
+			cursor: pointer;
+			font-weight: 600;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&:active {
+				opacity: .85;
+			}
 		}
 	}
 
@@ -104,82 +193,6 @@
 
 		&__button {
 			right: 3.125rem;
-		}
-
-	}
-
-	img {
-		width: 5rem;
-		height: 5rem;
-		border-radius: 50%;
-		-o-object-fit: cover;
-		object-fit: cover;
-		-o-object-position: center 65%;
-		object-position: center 65%;
-		display: flex;
-	}
-
-	&__profile-photo {}
-
-	&__photo {
-		height: 2.25rem;
-		width: 2.25rem;
-		border-radius: 50%;
-		background-color: var(--clr-gray-dark-3);
-	}
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__user-name {}
-
-	&__preview,
-	&__sent-time {
-		font-weight: 300;
-		font-size: 1.2em;
-	}
-
-	&__preview {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		max-width: 27ch;
-	}
-
-	&__sent-time {
-		display: flex;
-		align-self: flex-end;
-		line-height: 1.9;
-		font-size: inherit;
-
-		&::before {
-			content: "•";
-			margin-right: .3rem;
-			margin-left: -.4rem;
-		}
-	}
-
-	.user-messages__show-all {
-		width: calc(100% + (var(--padding) * 2));
-		display: flex;
-		justify-content: center;
-		border-top: 1px solid var(--clr-gray-dark-3);
-		background-color: var(--clr-gray-dark-1);
-		padding: var(--padding);
-		border-radius: 0 0 var(--border-radius) var(--border-radius);
-
-
-		.user-messages__show-all--link {
-			display: inline-block;
-			color: var(--clr-primary-light);
-			cursor: pointer;
-			font-weight: 600;
-
-			&:hover {
-				text-decoration: underline;
-			}
 		}
 	}
 }

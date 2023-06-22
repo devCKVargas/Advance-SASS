@@ -24,15 +24,18 @@ for (const navItem of sideNavItems) {
 }
 
 //? Show profile when clicked
-const user = document.querySelector("#user-profile");
 const yourProfile = document.querySelector(".your-profile");
+const user = document.querySelector("#user-profile");
 
-user.addEventListener("click", () => {
-	yourProfile.classList.toggle("show-profile");
+//TODO Hide profile when clicking outside the element
+document.addEventListener("click", (event) => {
+	if (user.contains(event.target)) yourProfile.classList.toggle("hidden");
 });
 
-//? Hide profile when clicking outside the element
-document.addEventListener("click", (event) => {
-	if (!user.contains(event.target) && !yourProfile.contains(event.target))
-		yourProfile.classList.remove("show-profile");
+//? Show chat when clicked
+const chat = document.querySelector("#user-chat");
+const userChats = document.querySelector(".user-messages");
+
+chat.addEventListener("click", () => {
+	userChats.classList.toggle("hidden");
 });

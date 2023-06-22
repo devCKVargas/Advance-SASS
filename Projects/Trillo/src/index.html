@@ -40,7 +40,7 @@
 				<!-- @ Search input -->
 				<form action="#" class="search">
 					<input type="text" class="search__input" placeholder="Search hotels" aria-label="Search hotels" />
-					<button class="search__button" aria-label="Search button">
+					<button class="search__button" type="button" aria-label="Search button">
 						<!--$ use svg from sprite.svg (only for live servers) -->
 						<svg class="search__icon">
 							<use xlink:href="assets/svg/sprite.svg#icon-magnifying-glass"></use>
@@ -49,31 +49,124 @@
 				</form>
 				<!-- @ User navigation -->
 				<nav class="user-nav" aria-label="Profile navigation">
-					<a href="#" id="user-bookmark">
+					<button type="button" id="user-bookmark">
 						<div class="user-nav__icon-box">
 							<svg class="user-nav__icon" role="img" aria-label="Bookmark">
 								<use xlink:href="assets/svg/sprite.svg#icon-bookmark"></use>
 							</svg>
 							<span class="user-nav__notification">7</span>
 						</div>
-					</a>
-					<a href="#" id="user-chat">
+					</button>
+					<button type="button" id="user-chat">
 						<div class="user-nav__icon-box">
 							<svg class="user-nav__icon" role="img" aria-label="Chat">
 								<use xlink:href="assets/svg/sprite.svg#icon-chat"></use>
 							</svg>
 							<span class="user-nav__notification">13</span>
 						</div>
-					</a>
-					<a href="#" id="user-profile">
+					</button>
+					<button type="button" id="user-profile">
 						<div class="user-nav__user">
 							<img src="assets/img/user-ck.jpg" alt="User photo" class="user-nav__user-photo" />
 							<span class="user-nav__user-name">CK</span>
 						</div>
-					</a>
+					</button>
+					<!-- @ Chat -->
+					<!-- $ hidden -->
+					<div class="user-messages">
+						<div class="user-messages__controls">
+							<h3 class="user-messages__controls-heading">Chats</h3>
+							<div class="user-messages__controls-icon-box">
+								<button type="button">
+									<svg class="user-messages__controls-icon" role="img" aria-label="">
+										<use xlink:href="assets/svg/sprite.svg#icon-dots-three-horizontal"></use>
+									</svg>
+								</button>
+								<button type="button">
+									<svg class="user-messages__controls-icon" role="img" aria-label="">
+										<use xlink:href="assets/svg/sprite.svg#icon-zoom_out_map"></use>
+									</svg>
+								</button>
+								<button type="button">
+									<svg class="user-messages__controls-icon" role="img" aria-label="">
+										<use xlink:href="assets/svg/sprite.svg#icon-video-camera"></use>
+									</svg>
+								</button>
+								<button type="button">
+									<svg class="user-messages__controls-icon" role="img" aria-label="">
+										<use xlink:href="assets/svg/sprite.svg#icon-edit"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<!-- @ Search chat -->
+						<form action="#" class="search">
+							<input type="text" class="search__input" placeholder="Search Chat" aria-label="Search hotels" />
+							<button class="search__button" type="button" aria-label="Search button">
+								<!--$ use svg from sprite.svg (only for live servers) -->
+								<svg class="search__icon">
+									<use xlink:href="assets/svg/sprite.svg#icon-magnifying-glass"></use>
+								</svg>
+							</button>
+						</form>
+						<!-- @ User Messages -->
+						<div class="user-messages__chats">
+							<button type="button">
+								<div class="user-messages__chats__chat-box">
+									<div class="user-messages__chats__profile-photo">
+										<img src="assets/img/user-5.jpg" alt="Chat-1">
+									</div>
+									<div class="user-messages__chats__content">
+										<h4 class="user-messages__chats__user-name">Ezcammer</h4>
+										<p class="user-messages__chats__preview">Kulang pero ahahahahaha</p>
+									</div>
+									<span class="user-messages__chats__sent-time">3m</span>
+								</div>
+							</button>
+							<button type="button">
+								<div class="user-messages__chats__chat-box">
+									<div class="user-messages__chats__profile-photo">
+										<img src="assets/img/user-6.jpg" alt="Chat-2">
+									</div>
+									<div class="user-messages__chats__content">
+										<h4 class="user-messages__chats__user-name">Butsog</h4>
+										<p class="user-messages__chats__preview">Woof! woof!</p>
+									</div>
+									<span class="user-messages__chats__sent-time">5m</span>
+								</div>
+							</button>
+							<button type="button">
+								<div class="user-messages__chats__chat-box">
+									<div class="user-messages__chats__profile-photo">
+										<img src="assets/img/user-3.jpg" alt="Chat-3">
+									</div>
+									<div class="user-messages__chats__content">
+										<h4 class="user-messages__chats__user-name">Lucky Charm</h4>
+										<p class="user-messages__chats__preview">Lucky sent an attachment.</p>
+									</div>
+									<span class="user-messages__chats__sent-time">30m</span>
+								</div>
+							</button>
+							<button type="button">
+								<div class="user-messages__chats__chat-box">
+									<div class="user-messages__chats__profile-photo">
+										<img src="assets/img/user-4.jpg" alt="Chat-3">
+									</div>
+									<div class="user-messages__chats__content">
+										<h4 class="user-messages__chats__user-name">Sa gc sa messenger</h4>
+										<p class="user-messages__chats__preview">Lucky reacted 😆 to your message</p>
+									</div>
+									<span class="user-messages__chats__sent-time">1h</span>
+								</div>
+							</button>
+						</div>
+						<div class="user-messages__show-all">
+							<a href="#" class="user-messages__show-all--link">Show all</a>
+						</div>
+					</div>
 					<!-- @ User profile -->
 					<!-- $ hidden -->
-					<div class="your-profile" aria-label="Your profile">
+					<div class="your-profile hidden" aria-label="Your profile">
 						<div class="your-profile__accounts">
 							<a href="#">
 								<div class="your-profile__user">
@@ -89,7 +182,7 @@
 							</a>
 						</div>
 						<div class="your-profile__settings">
-							<a href="#">
+							<button type="button">
 								<h2 class="your-profile__items">
 									<svg class="icon icon-cog">
 										<use xlink:href="assets/svg/sprite.svg#icon-cog"></use>
@@ -99,62 +192,62 @@
 										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
 									</svg>
 								</h2>
-							</a>
-							<a href="#">
-								<h2 class="your-profile__items">
-									<svg class="icon icon-help-with-circle">
-										<use xlink:href="assets/svg/sprite.svg#icon-help-with-circle"></use>
-									</svg>
-									Help &amp; support
-									<svg class="icon icon-more">
-										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
-									</svg>
-								</h2>
-							</a>
-							<a href="#">
-								<h2 class="your-profile__items">
-									<svg class="icon icon-moon-fill">
-										<use xlink:href="assets/svg/sprite.svg#icon-moon-fill"></use>
-									</svg>
-									Display &amp; accessibility
-									<svg class="icon icon-more">
-										<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
-									</svg>
-								</h2>
-							</a>
-							<a href="#">
-								<h2 class="your-profile__items">
-									<svg class="icon icon-message">
-										<use xlink:href="assets/svg/sprite.svg#icon-message">
-										</use>
-									</svg>
-									Give feedback
-								</h2>
-							</a>
-							<a href="#">
-								<h2 class="your-profile__items">
-									<svg class="icon icon-exit">
-										<use xlink:href="assets/svg/sprite.svg#icon-exit">
-										</use>
-									</svg>
-									Log out
-								</h2>
-							</a>
-							<footer class="your-profile__footer" aria-label="Your profile footer navigation">
-								<div class="your-profile__footer__container">
-									<ul class="your-profile__footer__list">
-										<li class="your-profile__footer__list__item">
-											<a href="#">Privacy</a>
-										</li>
-										<li class="your-profile__footer__list__item">
-											<a href="#">Terms</a>
-										</li>
-										<li class="your-profile__footer__list__item">
-											Trillo &copy; <span class="current-year">2077</span>
-										</li>
-									</ul>
-								</div>
-							</footer>
+								</butt>
+								<button type="button">
+									<h2 class="your-profile__items">
+										<svg class="icon icon-help-with-circle">
+											<use xlink:href="assets/svg/sprite.svg#icon-help-with-circle"></use>
+										</svg>
+										Help &amp; support
+										<svg class="icon icon-more">
+											<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+										</svg>
+									</h2>
+								</button>
+								<button type="button">
+									<h2 class="your-profile__items">
+										<svg class="icon icon-moon-fill">
+											<use xlink:href="assets/svg/sprite.svg#icon-moon-fill"></use>
+										</svg>
+										Display &amp; accessibility
+										<svg class="icon icon-more">
+											<use xlink:href="assets/svg/sprite.svg#icon-chevron-thin-right"></use>
+										</svg>
+									</h2>
+								</button>
+								<a href="#">
+									<h2 class="your-profile__items">
+										<svg class="icon icon-message">
+											<use xlink:href="assets/svg/sprite.svg#icon-message">
+											</use>
+										</svg>
+										Give feedback
+									</h2>
+								</a>
+								<a href="#">
+									<h2 class="your-profile__items">
+										<svg class="icon icon-exit">
+											<use xlink:href="assets/svg/sprite.svg#icon-exit">
+											</use>
+										</svg>
+										Log out
+									</h2>
+								</a>
+								<footer class="your-profile__footer" aria-label="Your profile footer navigation">
+									<div class="your-profile__footer__container">
+										<ul class="your-profile__footer__list">
+											<li class="your-profile__footer__list__item">
+												<a href="#">Privacy</a>
+											</li>
+											<li class="your-profile__footer__list__item">
+												<a href="#">Terms</a>
+											</li>
+											<li class="your-profile__footer__list__item">
+												Trillo &copy; <span class="current-year">2077</span>
+											</li>
+										</ul>
+									</div>
+								</footer>
 						</div>
 					</div>
 				</nav>
@@ -206,16 +299,24 @@
 					<!-- @ gallery -->
 					<div class="gallery">
 						<figure class="gallery__item">
-							<a href="#"><img src="assets/img/hotel-1.jpg" alt="Front photo of Okada Manila Resort & Casino" class="gallery__photo"></a>
+							<a href="#">
+								<img src="assets/img/hotel-1.jpg" alt="Front photo of Okada Manila Resort & Casino" class="gallery__photo">
+							</a>
 						</figure>
 						<figure class="gallery__item">
-							<a href="#"><img src="assets/img/hotel-4.jpg" alt="Photo of hotel 4" class="gallery__photo"></a>
+							<a href="#">
+								<img src="assets/img/hotel-4.jpg" alt="Photo of hotel 4" class="gallery__photo">
+							</a>
 						</figure>
 						<figure class="gallery__item">
-							<a href="#"><img src="assets/img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo"></a>
+							<a href="#">
+								<img src="assets/img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo">
+							</a>
 						</figure>
 						<figure class="gallery__item">
-							<a href="#"><img src="assets/img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo"></a>
+							<a href="#">
+								<img src="assets/img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo">
+							</a>
 						</figure>
 					</div>
 					<!-- @ hotel overview -->
@@ -353,7 +454,7 @@
 						<h2 class="cta__book-now">
 							Good news! We have 4 free rooms for your selected dates!
 						</h2>
-						<a href="#" type="button" class="btn" aria-labelledby="book-now">
+						<a href="#" class="btn" aria-labelledby="book-now">
 							<span class="btn__visible" id="book-now">Book now</span>
 							<!-- @ Remaining room -->
 							<span class="btn__invisible">Only 4 rooms left</span>

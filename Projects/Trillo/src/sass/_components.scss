@@ -26,6 +26,7 @@
 	@include media(600em) {
 		order: 1;
 		flex: 0 0 100%;
+		align-self: flex-start;
 	}
 
 	&__input {
@@ -37,22 +38,12 @@
 		padding: 0.7rem 2rem;
 		border-radius: 100px;
 		width: 90%;
-		transition: all 0.2s;
-		margin-right: -3.25rem;
+		transition: width 0.2s;
 
 		&:focus {
 			width: 100%;
 			background-color: var(--clr-gray-light-3);
-
-			@include media(450em) {
-				margin-right: 0;
-
-				+ .search__button {
-					position: absolute;
-					right: 1.5rem;
-					top: 0.45rem;
-				}
-			}
+			margin-right: 0;
 		}
 
 		&::-webkit-input-placeholder {
@@ -65,6 +56,9 @@
 		border: none;
 		background-color: transparent;
 		font-family: inherit;
+		display: flex;
+		position: relative;
+		right: 4rem;
 
 		&:active {
 			transform: translateY(2px);
@@ -95,7 +89,7 @@
 	position: relative;
 
 	& > * {
-		padding: 0 2rem;
+		padding: 1rem 2rem;
 		cursor: pointer;
 		height: 100%;
 		display: flex;
@@ -160,7 +154,7 @@
 ///////////////////////////////////////////////////
 //! OPENED USER PROFILE ==========
 .your-profile {
-	display: none;
+	display: flex;
 	position: absolute;
 	z-index: 2;
 	top: 6.5rem;
@@ -186,6 +180,8 @@
 	//$ test
 	// min-height: 30rem;
 	min-width: 31.5rem;
+
+
 
 	a:link,
 	a:visited {
@@ -243,6 +239,10 @@
 		&:hover {
 			background-color: var(--clr-gray-dark-3);
 		}
+
+		&:active {
+			background-color: var(--clr-gray-dark-2);
+		}
 	}
 
 	&__user {
@@ -279,6 +279,10 @@
 		&:hover {
 			background-color: var(--clr-gray-dark-3);
 		}
+
+		&:active {
+			background-color: var(--clr-gray-dark-2);
+		}
 	}
 
 	.icon {
@@ -304,6 +308,10 @@
 
 	&__footer {
 		padding: 1.05rem 1rem;
+
+		a:active {
+			opacity: .8;
+		}
 
 		&__container {
 			color: var(--clr-gray-light-4);
@@ -334,10 +342,9 @@
 	}
 }
 
-.show-profile {
-	display: flex;
-}
-
+// .show-profile {
+// 	display: flex;
+// }
 ///////////////////////////////////////////////////
 //! SIDE NAVIGATION ==========
 
@@ -626,6 +633,7 @@
 	font-weight: 300;
 	font-family: inherit;
 	color: var(--clr-white);
+	display: inline-block;
 	text-transform: uppercase;
 	border-radius: 100px;
 	border: none;
@@ -877,6 +885,12 @@
 		font-size: 20rem;
 		font-family: sans-serif;
 		color: var(--clr-gray-light-3);
+
+		@include media(600em) {
+			font-size: 15rem;
+			top: -.25rem;
+			left: 0;
+		}
 	}
 
 	&__text {

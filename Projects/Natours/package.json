@@ -1,0 +1,38 @@
+{
+	"name": "Natours",
+	"version": "0.1.0",
+	"description": "Natours app using floats",
+	"main": "public/index.html",
+	"author": "devCKVargas",
+	"scripts": {
+		"build:sass": "sass  --no-source-map src/sass:public/css",
+		"copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
+		"copy:html": "copyfiles -u 1 ./src/*.html public",
+		"copy:css": "copyfiles -u 1 ./src/css/**/* public",
+		"copy:js": "copyfiles -u 1 ./src/js/**/* public",
+		"copy": "npm-run-all --parallel copy:*",
+		"watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
+		"watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+		"watch:css": "onchange  \"src/css/**/*\" -- npm run copy:css",
+		"watch:js": "onchange  \"src/js/**/*\" -- npm run copy:js",
+		"watch:sass": "sass  --no-source-map --watch src/sass:public/css",
+		"watch": "npm-run-all --parallel watch:*",
+		"concat:css": "concat --output public/css/style.css public/css/icon-font.css public/css/main.css",
+		"addprefix": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+		"serve": "browser-sync start --server public --files public --port 5501",
+		"start": "npm-run-all copy --parallel watch serve",
+		"build": "npm-run-all copy:* build:* addprefix"
+	},
+	"dependencies": {
+		"@csstools/normalize.css": "^12.0.0",
+		"autoprefixer": "^10.4.14",
+		"browser-sync": "^2.29.3",
+		"concat": "^1.0.3",
+		"copyfiles": "^2.4.1",
+		"cssnano": "^6.0.1",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"postcss-cli": "^10.1.0",
+		"sass": "^1.63.5"
+	}
+}

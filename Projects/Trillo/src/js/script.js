@@ -1,13 +1,10 @@
 "use strict";
 
+//? Update text to current year
 const yearNow = document.querySelectorAll(".current-year");
 for (const item of yearNow) item.innerHTML = new Date().getFullYear().toString();
 
-//? Event listeners
-document.querySelector("#user-bookmark").addEventListener("click", () => {});
-document.querySelector("#user-chat").addEventListener("click", () => {});
-
-//? add click for every item in the side nav
+//? Change active item in sidenav
 const sideNavItems = document.querySelectorAll(".side-nav__item");
 
 for (const navItem of sideNavItems) {
@@ -23,19 +20,36 @@ for (const navItem of sideNavItems) {
 	});
 }
 
-//? Show profile when clicked
-const yourProfile = document.querySelector(".your-profile");
-const user = document.querySelector("#user-profile");
+//? Header navigation buttons
+const userBtn = document.querySelector("#user-profile");
+const profileContainer = document.querySelector(".your-profile");
+const chatBtn = document.querySelector("#user-chat");
+const chatsContainer = document.querySelector(".user-messages");
 
-//TODO Hide profile when clicking outside the element
+const toggleElement = function (container, className) {
+	container.classList.toggle(className);
+};
+
+const hideElement = function (container, className) {
+	container.classList.add(className);
+};
+
+const showElement = function (container, className) {
+	container.classList.remove(className);
+};
+
 document.addEventListener("click", (event) => {
-	if (user.contains(event.target)) yourProfile.classList.toggle("hidden");
-});
+	//? Toggle Profile
+	const isUserBtnClicked = userBtn.contains(event.target);
+	const notProfileClicked = !profileContainer.contains(event.target);
 
-//? Show chat when clicked
-const chat = document.querySelector("#user-chat");
-const userChats = document.querySelector(".user-messages");
+	if (isUserBtnClicked) toggleElement(profileContainer, "hidden");
+	else if (notProfileClicked) hideElement(profileContainer, "hidden");
 
-chat.addEventListener("click", () => {
-	userChats.classList.toggle("hidden");
+	//? Toggle Chats
+	const isChatBtnClicked = chatBtn.contains(event.target);
+	const notChatClicked = !chatsContainer.contains(event.target);
+
+	if (isChatBtnClicked) toggleElement(chatsContainer, "hidden");
+	else if (notChatClicked) hideElement(chatsContainer, "hidden");
 });

@@ -1,15 +1,57 @@
 // COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #B28451;
+$clr-primary: #c69963;
+$clr-primary-dark: #b28451;
 
-$color-secondary: #101d2c;
+$clr-secondary: #101d2c;
 
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
+$clr-gray-light-1: #f9f7f6;
+$clr-gray-light-2: #aaa;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+$clr-gray-dark-1: #54483a;
+$clr-gray-dark-2: #6d5d4b;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+$ff-primary: "Nunito", sans-serif;
+$ff-display: "Josefin Sans", sans-serif;
+
+#__bs_notify__ {
+	font-size: 0.5rem !important;
+	top: unset !important;
+	bottom: 0% !important;
+	border-radius: 0 !important;
+	padding: 2px !important;
+	width: 50px !important;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $ff-primary;
+	color: $clr-gray-dark-2;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+	grid-template-columns: repeat(8, 14rem);
+
+	//$ test
+	& > * {
+		padding: 4rem;
+		font-size: 3rem;
+	}
+}
+

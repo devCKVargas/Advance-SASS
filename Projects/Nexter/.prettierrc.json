@@ -1,0 +1,15 @@
+{
+	"trailingComma": "es5",
+	"tabWidth": 2,
+	"semi": true,
+	"singleQuote": false,
+	"printWidth": 100,
+	"useTabs": true,
+	"endOfLine": "crlf",
+	"overrides": [
+		{
+			"files": "*.scss",
+			"options": { "parser": "scss" }
+		}
+	]
+}

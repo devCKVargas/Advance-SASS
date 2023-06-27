@@ -1,4 +1,4 @@
-// COLOR VARIABLES
+//$ colors
 $clr-primary: #c69963;
 $clr-primary-dark: #b28451;
 
@@ -10,7 +10,7 @@ $clr-gray-light-2: #aaa;
 $clr-gray-dark-1: #54483a;
 $clr-gray-dark-2: #6d5d4b;
 
-// FONT VARIABLES
+//$ fonts
 $ff-primary: "Nunito", sans-serif;
 $ff-display: "Josefin Sans", sans-serif;
 
@@ -38,7 +38,11 @@ $ff-display: "Josefin Sans", sans-serif;
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+	@include media(1200em) {
+		font-size: 50%; // 8px
+	}
 }
 
 body {
@@ -60,13 +64,18 @@ h6 {
 .wrapper {
 	display: grid;
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-
 	// ? 8 column layout + sidebar
 	grid-template-columns:
-		[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(
-			8,
-			[col-start] minmax(min-content, 14rem) [col-end]
-		)
+		[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start]
+		repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end] minmax(6rem, 1fr) [full-end];
+
+	@include media(1000em) {
+		// grid-template-rows: 7rem 80vh min-content 40vw repeat(3, min-content);
+		grid-template-columns:
+			[full-start] minmax(6rem, 1fr) [center-start]
+			repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+			[center-end] minmax(6rem, 1fr) [full-end];
+	}
 }
 

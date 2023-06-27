@@ -1,8 +1,8 @@
+@import "mixin";
 @import "base";
 @import "layout";
-@import "mediaquery";
 @import "utilities";
-//@ components
+
 @import "components";
 @import "components/user-navigation";
 @import "components/chats";

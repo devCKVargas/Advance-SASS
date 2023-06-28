@@ -13,6 +13,14 @@
 	gap: 1.5rem;
 	justify-content: center;
 
+	@include media(800em) {
+		grid-column: 1 / -1;
+	}
+
+	@include media(600em) {
+		padding: 5rem;
+	}
+
 	&__logo {
 		height: 3rem;
 		justify-self: center;

@@ -23,9 +23,36 @@ $ff-display: "Josefin Sans", sans-serif;
 	width: 50px !important;
 }
 
+
 ::selection {
 	color: #fff;
 	background-color: $clr-primary;
+}
+
+//! scrollbar firefox
+:root {
+	scrollbar-width: thin;
+	scrollbar-color: $clr-primary-dark $clr-secondary;
+}
+
+//! scrollbar other browsers
+::-webkit-scrollbar {
+	width: 10px; //? horizontal
+	height: 10px; //? vertical
+
+	&-thumb {
+		--scrollbar-hover: hsl(32, 39%, 40%);
+		background: $clr-primary-dark;
+		border-radius: 100rem;
+
+		&:hover {
+			background-color: var(--scrollbar-hover);
+		}
+	}
+
+	&-track {
+		background: $clr-secondary;
+	}
 }
 
 *,
@@ -39,6 +66,7 @@ $ff-display: "Josefin Sans", sans-serif;
 
 html {
 	font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+	scroll-behavior: smooth;
 
 	@include media(1200em) {
 		font-size: 50%; // 8px
@@ -66,16 +94,18 @@ h6 {
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 	// ? 8 column layout + sidebar
 	grid-template-columns:
-		[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start]
-		repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-		[center-end] minmax(6rem, 1fr) [full-end];
+		[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,
+			[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
 	@include media(1000em) {
-		// grid-template-rows: 7rem 80vh min-content 40vw repeat(3, min-content);
+		grid-template-rows: 7rem 80vh min-content 40vw repeat(3, min-content);
 		grid-template-columns:
-			[full-start] minmax(6rem, 1fr) [center-start]
-			repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-			[center-end] minmax(6rem, 1fr) [full-end];
+			[full-start] minmax(6rem, 1fr) [center-start] repeat(8,
+				[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+	}
+
+	@include media(800em) {
+		--sidebar: 7rem;
+		grid-template-rows: var(--sidebar) calc(100vh - var(--sidebar));
 	}
 }
-

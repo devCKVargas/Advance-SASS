@@ -4,7 +4,16 @@
 
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(27.4rem, 1fr));
 	gap: 7rem;
+
+	@include media(1000em) {
+		margin: 9rem 0;
+	}
+
+	@include media(500em) {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	}
 }
 
 .home {
@@ -22,13 +31,14 @@
 
 	&__like {
 		grid-row: 1 / 2;
-		grid-column: 2 / 3;
+		grid-column: 1 / -1;
 		fill: $clr-primary;
 		height: 3rem;
 		width: 3rem;
 		z-index: 2;
 		justify-self: end;
 		margin: 1rem;
+		cursor: pointer;
 	}
 
 	&__name {
@@ -65,12 +75,18 @@
 		align-items: center;
 		gap: 1rem;
 		margin-left: 2.5rem;
+		margin-left: 3rem;
 
 		svg {
 			fill: $clr-primary;
 			height: 2rem;
 			width: 2rem;
 		}
+	}
+
+	&__rooms,
+	&__price {
+		margin-left: 0rem;
 	}
 
 	&__btn {

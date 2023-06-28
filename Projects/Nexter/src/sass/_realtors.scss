@@ -8,11 +8,26 @@
 	justify-items: center;
 	gap: 2rem;
 
+	@include media(800em) {
+		grid-column: 1 / -1;
+		padding: 6rem 0 7rem 0;
+	}
+
 	&__list {
+		--gap: 2rem;
 		display: grid;
 		grid-template-columns: min-content max-content;
-		gap: 5vh 2rem;
+		gap: 5vh var(--gap);
 		align-items: center;
+
+		@include media(800em) {
+			grid-template-columns: repeat(3, min-content max-content);
+			gap: 5vh calc(var(--gap) * 2);
+		}
+
+		@include media(600em) {
+			grid-template-columns: min-content max-content;
+		}
 	}
 
 	&__img {
@@ -22,6 +37,10 @@
 	}
 
 	&__details {
+
+		@include media(800em) {
+			margin-left: calc(0rem - var(--gap)); //? turn into negative value
+		}
 	}
 
 	&__sold {

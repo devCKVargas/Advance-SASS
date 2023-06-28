@@ -8,9 +8,22 @@
 	list-style: none;
 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	// grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-template-columns: repeat(6, 1fr);
 	gap: 2rem;
 	align-items: center;
+
+	@include media(1000em) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include media(600em) {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	}
+
+	@include media(500em) {
+		grid-template-columns: 1fr;
+	}
 
 	&__link:link,
 	&__link:visited {

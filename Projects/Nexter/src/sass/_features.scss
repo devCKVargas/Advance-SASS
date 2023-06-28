@@ -5,9 +5,18 @@
 
 	display: grid;
 	// grid-template-columns: repeat(3, 1fr);
-	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	// grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
 	gap: 6rem;
 	align-items: start;
+
+	@include media(800em) {
+		margin: 9rem 0;
+	}
+
+	@include media(500em) {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	}
 }
 
 .feature {
